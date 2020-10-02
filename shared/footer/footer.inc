@@ -1,0 +1,79 @@
+<footer id="footer" class="footer">
+      <div class="footer__header">
+        <div class="footer__header__inner">
+          <div class="footer__header__row">
+            <div class="footer__header__row--left"></div>
+            <div class="footer__header__row--right">RELATED LINKS</div>
+          </div>
+        </div>
+        <div class="footer__header__bg--left"></div>
+        <div class="footer__header__bg--right"></div>
+      </div>
+      <div class="footer__row">
+        <div class="footer__row__inner">
+          <div class="footer__row__wrapper">
+            <div class="footer__row__col--left">
+              <div class="authors-list__container">
+              <a href="http://nces.ed.gov/" class="ies-link" style="display: block">
+                <!-- Need fix link on NRC  -->
+                    <img src="../images/ies_logo_white_250.png" alt="Connect on nces.ed.gov" width="255" height="auto" />
+              </a>
+              <div class="footer__authors-list">
+                <span>National Center for Education Statistics</span
+                ><br /><span>Institute of Education Sciences</span><br /><span
+                  >Potomac Center Plaza</span
+                ><br /><span>550 12th Street SW</span><br /><span
+                  >Washington, DC 20202</span
+                >
+              </div>
+              </div>
+              <p>
+                Prepared for the National Center for Education Statistics under
+                Contract No.ED-IES-12-D-0002 with the American Institutes for
+                Research.
+              </p>
+            </div>
+            <div class="footer__row__col--right">
+              <div class="footer__related-links">
+                <ul>
+                  <li>
+                    <a href="/about.aspx">About The Nation's Report Card</a>
+                  </li>
+                  <li>
+                    <a href="http://nces.ed.gov/nationsreportcard/about/"
+                      >About the National Assessment of Educational Progress
+                      (NAEP)</a
+                    >
+                  </li>
+                  <li><a href="/contacts.aspx">Contacts</a></li>
+                  <li><a href="/faq.aspx">FAQs</a></li>
+                  <li><a href="/glossary.aspx?ispopup=false">Glossary</a></li>
+                </ul>
+              </div>
+              <div class="footer__social-media">
+                <span>FOLLOW US</span
+                ><a
+                  class="icon_footer_twitter"
+                  title="Follow us on Twitter"
+                  aria-label="Follow us on Twitter"
+                  href="https://twitter.com/naep_nces"
+                  data-twitter=""
+                  ><img
+                    alt="twitter"
+                    src="../images/icon-twitter.png" /></a
+                ><a
+                  class="icon_footer_facebook"
+                  title="Follow us on Facebook"
+                  aria-label="Follow us on Facebook"
+                  href="https://www.facebook.com/NationalAssessmentofEducationalProgress"
+                  data-facebook=""
+                  ><img
+                    alt="facebook"
+                    src="../images/icon-facebook-inv.png"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>

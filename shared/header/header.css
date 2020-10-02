@@ -1,0 +1,236 @@
+/* ------document style starts here------ */
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Open Sans, Lucida Grande, Lucida, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+}
+/* ------document style ends here------ */
+
+/* ------- header style start here------- */
+#header {
+  background: #001871;
+}
+
+#header .header__bottom {
+  height: 140px;
+  color: #000;
+  /*attention: might need t o modify url path if it is served on NRC server */
+  /* background-image: url(/focus_on_naep/shared/images/NAEP_star_200.png); */
+  background-image: url(../images/NAEP_star_200.png);
+  background-size: 118px auto;
+  background-repeat: no-repeat;
+}
+
+#header .header__bottom,
+#primary-nav .nav__inner {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48em
+}
+
+@media only screen and (min-width:64em) { 
+  #header .header__bottom,
+  #primary-nav .nav__inner {
+    max-width: 64em
+  }
+}
+
+#header .header__bottom__inner {
+  padding-left: 90px;
+  position: relative
+}
+
+#header .site-name {
+  color: #fff;
+  margin: 0;
+  padding: 36px 0 0
+}
+
+#header .site-name__title {
+  font-size: 58px;
+  line-height: 58px
+}
+
+#header .site-name__mid {
+  font-size: 39px;
+  margin: 0 .15em
+}
+
+#header .site-name__content {
+  font-size: 58px;
+  line-height: 58px
+}
+
+#header .site-name__text {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+  padding-left: 4px
+}
+
+#header .social-media {
+  display: flex;
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+  top: 41px;
+  text-align: center
+}
+
+#header .social-media li a {
+  background-repeat: no-repeat;
+  color: #fff;
+  display: block;
+  font-size: .5625em;
+  font-family: Open Sans, Lucida Grande, Lucida, Arial, sans-serif;
+  padding-top: 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 55px;
+  margin-left: 5px;
+  /* background-image: url(/focus_on_naep/shared/images/social-icons.png); */
+  background-image: url(../images/social-icons.png);
+}
+
+#header .social-media li a.icon_email {
+  background-position: 0 0
+}
+
+#header .social-media li a.icon_email:focus,
+#header .social-media li a.icon_email:hover {
+  background-position: -55px 0
+}
+
+#header .social-media li a.icon_print {
+  background-position: -110px 0
+}
+
+#header .social-media li a.icon_print:focus,
+#header .social-media li a.icon_print:hover {
+  background-position: -165px 0
+}
+
+#header .social-media li a.icon_twitter {
+  background-position: -220px 0
+}
+
+#header .social-media li a.icon_twitter:focus,
+#header .social-media li a.icon_twitter:hover {
+  background-position: -275px 0
+}
+
+#header .social-media li a.icon_facebook {
+  background-position: -330px 0
+}
+
+#header .social-media li a.icon_facebook:focus,
+#header .social-media li a.icon_facebook:hover {
+  background-position: -385px 0
+}
+
+/* -------primary nav style starts here------- */
+#primary-nav {
+  background-color: #001871
+}
+
+#primary-nav .section-selector {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  height: 38px
+}
+
+@media only screen and (min-width:64em) {
+  #primary-nav .section-selector {
+    height: 38px
+  }
+}
+
+@media only screen and (max-width:64em) {
+  #primary-nav .section-selector {
+    height: 38px
+  }
+}
+
+#primary-nav .section-selector li {
+  height: auto;
+  margin: 0;
+  padding: 0
+}
+
+#primary-nav .section-selector li span {
+  display: table
+}
+
+#primary-nav .section-selector li span a {
+  color: #fff;
+  cursor: pointer;
+  display: table-cell;
+  font-family: Open Sans, Lucida Grande, Lucida, Arial, sans-serif;
+  line-height: 1.1em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  vertical-align: middle;
+  font-size: 1rem;
+  height: 38px;
+  margin: 0;
+  padding: 0 1rem
+}
+
+@media only screen and (min-width:64em) {
+  #primary-nav .section-selector li span a {
+    font-size: 1rem;
+    height: 38px;
+    margin: 0;
+    padding: 0 1.35rem
+  }
+}
+
+#primary-nav .section-selector li span a:focus,
+#primary-nav .section-selector li span a:hover {
+  background: #c69214;
+  color: #000
+}
+
+#primary-nav .section-selector li span a.active {
+  background: #007367;
+  color: #fff;
+  position: relative
+}
+
+#primary-nav .section-selector li span a.active:after {
+  border-color: #007367 transparent transparent;
+  border-style: solid;
+  content: "";
+  height: 0;
+  position: absolute;
+  left: 50%;
+  width: 0
+}
+
+@media only screen and (max-width:1023px) {
+  #primary-nav .section-selector li span a.active:after {
+    border-width: 9px 11px 0;
+    bottom: -9px;
+    margin-left: -11px
+  }
+}
+
+@media only screen and (min-width:1024px) {
+  #primary-nav .section-selector li span a.active:after {
+    border-width: 11px 13px 0;
+    bottom: -10px;
+    margin-left: -13px
+  }
+}
+/* -------primary nav style ends here------- */
