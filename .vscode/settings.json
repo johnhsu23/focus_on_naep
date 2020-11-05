@@ -1,0 +1,8 @@
+{
+  "liveServer.settings.port": 5501,
+    "liveServer.settings.proxy": {
+    "enable": true, //set it true to enable the feature.
+    "baseUri": "../", //from where you want to proxy. 
+    "proxyUri": "http://localhost/php/" //the actual url.
+},
+}
