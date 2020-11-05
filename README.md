@@ -26,15 +26,18 @@ Steps to use FoN footer and header
 
 1. Includes external css link between the head tag. 
 
+    ```html
     <head>
       ......
       <link href="/focus_on_naep/public/css/header.css" rel="stylesheet" />
       <link href="/focus_on_naep/public/css/footer.css" rel="stylesheet" />
       ......
     </head>
+    ```
 
 2. Includes .inc files inside the body tag.
 
+    ```html
     <body>
       ......
       <!--#include file="/focus_on_naep/public/inc/header.inc"-->
@@ -42,17 +45,21 @@ Steps to use FoN footer and header
       <!--#include file="/focus_on_naep/public/inc/footer.inc"-->
       ......
     </body>
+    ```
 
 3. Insert .js files before end of the body tag. The header.js and footer.js
 
+    ```html
     <body>
-      
-      
+    
       ......
+    
       <script src="/focus_on_naep/public/js/vendor/jquery.chunk.js"></script>
       <script src="/focus_on_naep/public/js/header.js"></script>
       <script src="/focus_on_naep/public/js/footer.js"></script>
+    
       ......
     </body>
+    ```
 
 Note: Recommend use absolute path to include resources (css, inc, js).
