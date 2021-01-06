@@ -11,8 +11,22 @@ a {
 main {
   margin: 0 auto;
   width: 1000px;
+  &.overlay {
+    background-color: rgba(103,128,159,0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: opacity 300ms;
+    opacity: 0.7;
+  }
 }
-#timeline-content {
+.main-content {
+  margin: 0 auto;
+  width: 1000px;
+}
+.timeline-content {
   margin-top: 50px;
   text-align: center;  
 }
