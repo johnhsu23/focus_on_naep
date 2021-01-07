@@ -141,12 +141,14 @@ main.overlay {
 
 .content-details .content-box::before {
   background-color: orange;
-  content: "x CLOSE";
+  content: "\2716  CLOSE";
   color: #ffffff;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: 700;
-  padding: 1em 2em;
+  letter-spacing: 0.1em;
+  padding: 0.5em 1em;
   position: absolute;
-  top: -8.4em;
+  vertical-align: middle;
+  top: -7.8em;
   right: 0;
 }
