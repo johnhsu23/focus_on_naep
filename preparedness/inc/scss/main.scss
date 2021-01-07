@@ -1,5 +1,29 @@
+/* start reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+
+  @media only screen and (max-width: 1000px) {
+      font-size: 50%;
+  }
+}
+/* end reset */
 body {
-  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  // font-size: 16px;
 }
 a { 
   color: #000;
@@ -23,12 +47,13 @@ main {
   }
 }
 .main-content {
+  font-size: 1.6rem;
   margin: 0 auto;
   width: 1000px;
   // background-color: antiquewhite;
 }
 .timeline-content {
-  margin-top: 50px;
+  margin-top: 3.25rem;
   text-align: center;  
 }
 .timeline {
@@ -36,7 +61,7 @@ main {
   border-bottom-right-radius: 4px;
   border-top-right-radius: 4px;
   color: #333333;
-  font-size: 1em;
+  // font-size: 1.6rem;
   margin-left: 15em;
   position: relative;
   padding: 2em 0.5em 2em 2em;
@@ -53,10 +78,10 @@ main {
     left: -0.8em;
   }
   h1 {
-    font-size: 1.7em;    
+    // font-size: 1.7rem;    
   }
   h3 {
-    font-size: 1.6em;
+    // font-size: 1.6rem;
     font-style: italic;
   }
   .event {
@@ -76,7 +101,7 @@ main {
     &:before {
       content: attr(data-date);
       display: inline-block;
-      font-size: 1.1em;
+      // font-size: 1.1em;
       font-weight: 700;
       top: 0.2em;
       left: -16em;
@@ -96,14 +121,14 @@ main {
 }
 .expanded-view {
   // display: none;
-  margin-top: 10em;
+  margin: 10em 0;
   overflow: visible;
   position: relative;
   padding: 5em 0 0 0;
   width: 100%;
   z-index: 1;
   &:before{
-    border-top: 0.7em solid orange;
+    border-top: 0.7em solid #c69314;
     content: '';
     width: 100%;
     height: 100%;
@@ -116,23 +141,29 @@ main {
   }
 }
 .content-details {
-  
+  font-size: 1.6rem;
+
   .content-box {
     margin: 0 auto;
     position: relative;
     width: 1000px;
     &::before {
-      background-color: orange;
+      background-color: #c69314;
       content: "\2716  CLOSE";
       color: #ffffff;
-      font-size: 1.3em;
+      font-size: 1.8rem;
       font-weight: 700;
       letter-spacing: 0.1em;
       padding: 0.5em 1em;
       position: absolute;
       vertical-align: middle;
-      top: -7.8em;
+      top: -6.6em;
       right: 0;
+    }
+    .open-it {
+      color: #007367;
+      content: "\271A Read More";
+      font-size: 1.7rem;
     }
   }
 }
