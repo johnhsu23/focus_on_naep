@@ -46,7 +46,7 @@ main.overlay {
   font-size: 1em;
   margin-left: 15em;
   position: relative;
-  padding: 2em;
+  padding: 2em 0.5em 2em 2em;
   list-style: none;
   text-align: left;
 }
@@ -119,7 +119,7 @@ main.overlay {
 }
 
 .expanded-view:before {
-  border-top: 5px solid orange;
+  border-top: 0.7em solid orange;
   content: '';
   width: 100%;
   height: 100%;
@@ -135,5 +135,18 @@ main.overlay {
 
 .content-details .content-box {
   margin: 0 auto;
+  position: relative;
   width: 1000px;
+}
+
+.content-details .content-box::before {
+  background-color: orange;
+  content: "x CLOSE";
+  color: #ffffff;
+  font-size: 1.2em;
+  font-weight: 700;
+  padding: 1em 2em;
+  position: absolute;
+  top: -8.4em;
+  right: 0;
 }
