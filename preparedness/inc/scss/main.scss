@@ -19,10 +19,17 @@ html {
   }
 }
 /* end reset */
+
+/* Add animation (Standard syntax) */
+@keyframes for-the-modal {
+  from { bottom: -700px; opacity: 0; }
+  to { bottom: 0; opacity: 1; }
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.3;
   // font-size: 16px;
 }
 a { 
@@ -35,98 +42,170 @@ a {
 main {
   margin: 0 auto;
   width: 1000px;
-  &.overlay {
-    background-color: rgba(103,128,159,0.8);
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    transition: opacity 300ms;
-    opacity: 0.7;
-  }
 }
 .main-content {
   font-size: 1.6rem;
   margin: 0 auto;
   width: 1000px;
-  // background-color: antiquewhite;
 }
 .timeline-content {
   margin-top: 3.25rem;
-  text-align: center;  
-}
-.timeline {
-  border-left: 0.4em solid #002060;
-  border-bottom-right-radius: 4px;
-  border-top-right-radius: 4px;
-  color: #333333;
-  // font-size: 1.6rem;
-  margin-left: 15em;
-  position: relative;
-  padding: 2em 0.5em 2em 2em;
-  list-style: none;
-  text-align: left;
-  &:before {
-    background: #002060;
-    border-radius: 1em;
-    height: 1.2em;
-    width: 1.2em;
-    content: "";
-    position: absolute;
-    top: -0.1em;
-    left: -0.8em;
-  }
-  h1 {
-    // font-size: 1.7rem;    
-  }
-  h3 {
-    // font-size: 1.6rem;
-    font-style: italic;
-  }
-  .event {
-    padding-bottom: 3em;
-    margin-bottom: 3em;
-    position: relative;
-    &:last-of-type { 
-      padding-bottom: 0;
-      margin-bottom: 0; 
-      border: none;      
-    }
-    &:before, &:after {
+  text-align: center; 
+  [class^=type] {
+    &::before { 
+      font-size: 1.2em;
       position: absolute;
-      display: block;
-      // top: 0;
+      left: 0;  
+      top: -0.15em;
     }
-    &:before {
-      content: attr(data-date);
-      display: inline-block;
-      // font-size: 1.1em;
-      font-weight: 700;
-      top: 0.2em;
-      left: -16em;
-      text-align: right;
-      width: 12em;
+    &.type01::before {
+      color: rgb(192,0,0);
+      content: "\25FC";
     }
-    &:after {
-      background: #002060;
-      border-radius: 1em;
-      content: "";
-      top: 0.2em;
-      left: -2.9em;
-      height: 1.4em;
-      width: 1.4em;
+    &.type02::before {
+      color: rgb(0,115,103);
+      content:"\25B2";
+    }
+    &.type03::before {
+      color: rgb(91,155,213);
+      content:"\2B1F";
+    }
+    &.type04::before {
+      color: rgb(198,147,20);
+      content:"\2BC1";
+    }
+  }
+  ul.timeline-legend {
+    border: 1px solid grey;
+    border-radius: 0.175em;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    position: relative;
+    text-align: left;
+    li {
+      border-right: 1px solid grey;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      font-size: 0.8em;
+      padding: 0.2em 0.5em 0.5em 1.8em;
+      position: relative;
+      vertical-align: middle;
+      &:before {
+        padding-left: 0.5em;
+        top: 0.1em;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  } 
+  ul.timeline {
+    border-left: 0.2em solid #002060;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #333333;
+    margin-left: 15em;
+    margin-top: 2em;
+    position: relative;
+    padding: 2em 0.5em 2em 2em;
+    list-style: none;
+    text-align: left;
+    li.event {
+      padding-bottom: 3em;
+      margin-bottom: 3em;
+      position: relative;
+      &:last-of-type { 
+        padding-bottom: 0;
+        margin-bottom: 0; 
+        border: none;      
+      }
+      &:before, &:after {
+        position: absolute;
+        display: block;
+      }
+      &:before {
+        content: attr(data-date);
+        // display: inline-block;
+        font-size: 1.3em;
+        font-weight: 700;
+        top: 0;
+        left: -8em;
+        text-align: right;
+        width: 5em;
+      }
+      &:after {
+        background-color: #002060;
+        content: "";
+        height: 0.8em;
+        width: 0.8em;
+        top: 0.5em;
+        left: -2.5em;
+        transform:rotate(45deg);
+      }
+      &:hover {
+        // background-color: #f1f1f1;
+        // transform: skewX(0.001deg);
+        // transition: transform .3s ease-in-out;
+      }
+      h3 {
+        font-weight: 500;
+        padding-left: 1.2em;
+        line-height: 1.2;
+        
+        &:hover {
+          // transform: skewX(-20deg);
+          // font-style: italic;
+
+        }
+      }
+      p { display: none;}
     }
   }
 }
-.expanded-view {
-  // display: none;
+/* the modal styles */
+.modal {
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  top: 0;
+  // height: 100%;
+  // width: 100%;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* display modal with target */
+.modal:target {
+  display: table;
+  position: absolute;
+}
+
+/* The modal box */
+.modal-dialog {
+  vertical-align: middle;
+}
+
+/* The modal's content */
+.modal-dialog .modal-content {
+  background-color: #ffffff;
   margin: 10em 0;
   overflow: visible;
   position: relative;
   padding: 5em 0 0 0;
+  height: 100%;
   width: 100%;
   z-index: 1;
+
+  /* Add animation */
+  -webkit-animation-name: for-the-modal; 
+  -webkit-animation-duration: 0.5s; 
+  animation-name: for-the-modal;
+  animation-duration: 0.5s;
+
   &:before{
     border-top: 0.7em solid #c69314;
     content: '';
@@ -139,31 +218,50 @@ main {
     transform-origin: left top;
     transform: skewY(-3deg);
   }
-}
-.content-details {
-  font-size: 1.6rem;
-
-  .content-box {
-    margin: 0 auto;
-    position: relative;
-    width: 1000px;
-    &::before {
-      background-color: #c69314;
-      content: "\2716  CLOSE";
-      color: #ffffff;
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      padding: 0.5em 1em;
-      position: absolute;
-      vertical-align: middle;
-      top: -6.6em;
-      right: 0;
-    }
-    .open-it {
-      color: #007367;
-      content: "\271A Read More";
-      font-size: 1.7rem;
+  .content-details {
+    font-size: 2rem;
+    .content-box {
+      height: 10000px;
+      margin: 0 auto;
+      position: relative;
+      width: 1000px;
+      .like-h3 {
+        color: #001971;
+        font-size: 2.4rem;
+        font-style: italic;
+        font-weight: 700;
+        span { 
+          display: block;
+          font-style: normal;
+        }
+      }
+      .close-it {
+        &::before {
+          background-color: #c69314;
+          content: "\2716  CLOSE";
+          color: #ffffff;
+          font-size: 1.8rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          padding: 0.5em 1em;
+          position: absolute;
+          vertical-align: middle;
+          top: -6.6em;
+          right: 0;
+        }
+      }
+      .expand {
+        &::before {
+          color: #007367;
+          content: "\271A Read More";
+          font-size: 2rem;
+          font-weight: 700;
+          letter-spacing: 0.1em;
+          position: absolute;
+          text-transform: uppercase;
+          right: 0;
+        }
+      }
     }
   }
 }
