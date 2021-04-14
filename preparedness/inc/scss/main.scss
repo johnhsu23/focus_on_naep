@@ -48,6 +48,42 @@ main {
   margin: 0 auto;
   width: 1000px;
 }
+.start-intro {
+  h2 {
+    color: rgb(0, 24, 113);
+  }
+  .flex-body {
+    display: flex;
+  }
+  .flex-row {
+    flex-direction: row;
+  }
+  .flex-column {
+    flex-direction: column;
+    margin-left: 1em;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  figure {
+    figcaption {
+      text-align: center;
+    }
+  }
+}
+.start-main {
+  header {
+    background-color: rgb(0, 115, 103);
+    line-height: 2;
+    margin: 1em 0;
+    padding-left: 0.5em;
+    h3 {
+      color: #ffffff;
+      font-size: 1.5em;
+      font-weight: 500;
+    }
+  }
+}
 .timeline-content {
   margin-top: 3.25rem;
   text-align: center; 
@@ -149,7 +185,7 @@ main {
         // transform: skewX(0.001deg);
         // transition: transform .3s ease-in-out;
       }
-      h3 {
+      h4 {
         font-weight: 500;
         padding-left: 1.2em;
         line-height: 1.2;
@@ -225,7 +261,7 @@ main {
       margin: 0 auto;
       position: relative;
       width: 1000px;
-      .like-h3 {
+      .like-h4 {
         color: #001971;
         font-size: 2.4rem;
         font-style: italic;
