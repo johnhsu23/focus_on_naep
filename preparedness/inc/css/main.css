@@ -263,7 +263,7 @@ main {
   background-color: rgba(0, 0, 0, 0.4);
   display: none;
   overflow: auto;
-  position: fixed;
+  position: relative;
   left: 0;
   top: 0;
   height: 100vh;
