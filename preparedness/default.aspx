@@ -261,8 +261,15 @@
         <div class="content-details">
           <div class="content-box">
             <a href="#" class="close-it"></a>
-            <p class="like-h4"><span>November 2002</span> National Commission on NAEP 12th-Grade Assessment and Reporting established</p>
-            <p>At Executive Director Roy Truby’s recommendation, the Governing Board established the National Commission on NAEP 12th-Grade Assessment and Reporting in 2002. The National Commission was charged with reviewing the 12th-grade assessment and developing recommendations to the Governing Board for improving it.</p>
+            <p class="like-h4"><span>March 2004</span> National Commission report delivered, calling for a “bold, new vision” for 12th-grade NAEP</p>
+            <p>The National Commission on NAEP 12th-Grade Assessment and Reporting delivered its report to the Governing Board in March 2004. The report, 12th-Grade Student Achievement in America: A New Vision for NAEP, called for a “bold, new vision” for 12th-grade NAEP (National Commission on NAEP 12th-Grade Assessment and Reporting, 2004, p.2). A key recommendation in the report was for NAEP to report on readiness of 12th-grade students for college, training for employment, and entrance into the military. The Governing Board accepted the National Commission’s report and began considering the recommendations and how they could be implemented.</p>
+            <p>The National Commission affirmed that NAEP should continue to assess students in 12th-grade, and they proposed ways to increase the viability and validity of the assessment. 
+            <ul>
+              <li>The recommendation given highest priority was to expand state NAEP assessments from grades 4 and 8 to include grade 12. The National Commission recommended that school participation in the 12th-grade state NAEP be mandatory for reading and mathematics and voluntary in science and writing. This would provide more useful information about student achievement and increase interest and participation in the assessment of 12th-graders.</li> 
+              <li>Next in importance was the recommendation for NAEP to report on readiness of 12th-grade students for college, training for employment, and entrance into the military.</li> 
+              <li>Three additional recommendations included development of innovative strategies for increasing participation of high schools and students in 12th-grade NAEP and for motivating students to perform to their highest ability on the assessment; give prominence to 12th-grade NAEP performance in NAEP reporting; and continue the 12th-grade NAEP transcript studies and enhance them by expanding the information collected and improving the dissemination of results. (National Commission on NAEP 12th-Grade Assessment and Reporting, 2004).</li>
+            </ul>
+            <p>Each committee of the Governing Board would be involved in developing and implementing one or more recommendations of the National Commission, and each committee began discussing and planning how best to organize efforts to achieve the goals.</p>
             <!-- <% Response.WriteFile("112002.htm"); %> -->
             <!-- <a id="hide1" href="#hide1" class="hide">+ Expand</a>
             <a id="show1" href="#show1" class="show">- Expand</a> -->

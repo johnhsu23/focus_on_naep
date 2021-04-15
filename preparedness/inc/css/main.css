@@ -129,6 +129,7 @@ main {
 
 .timeline-content {
   margin-top: 3.25rem;
+  margin-bottom: 3em;
   text-align: center;
 }
 
@@ -251,7 +252,7 @@ main {
 .timeline-content ul.timeline li.event h4 {
   font-weight: 500;
   padding-left: 1.5em;
-  line-height: 1.2;
+  line-height: 1.7;
 }
 
 .timeline-content ul.timeline li.event p {
@@ -318,7 +319,7 @@ main {
 }
 
 .modal-dialog .modal-content .content-details .content-box {
-  height: 10000px;
+  height: 100%;
   margin: 0 auto;
   position: relative;
   width: 1000px;
