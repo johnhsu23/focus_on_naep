@@ -210,7 +210,7 @@
               <h4 class="type02">The Content Alignment between the NAEP and WorkKeys Assessments: Final Report released.</h4>
               <p>Efforts to Evaluate Feasibility of Reporting Preparedness</p>
             </li>
-            <li class="event" data-date="January–March 2015">
+            <li class="event" data-date="January - March 2015">
               <h4 class="type04">NAEP assessments conducted</h4>
               <p>Efforts to Produce Reference Points for Reporting Preparedness</p>
             </li>
