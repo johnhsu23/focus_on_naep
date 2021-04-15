@@ -263,7 +263,6 @@
             <a href="#" class="close-it"></a>
             <p class="like-h4"><span>November 2002</span> National Commission on NAEP 12th-Grade Assessment and Reporting established</p>
             <p>At Executive Director Roy Truby’s recommendation, the Governing Board established the National Commission on NAEP 12th-Grade Assessment and Reporting in 2002. The National Commission was charged with reviewing the 12th-grade assessment and developing recommendations to the Governing Board for improving it.</p>
-            
             <!-- <% Response.WriteFile("112002.htm"); %> -->
             <!-- <a id="hide1" href="#hide1" class="hide">+ Expand</a>
             <a id="show1" href="#show1" class="show">- Expand</a> -->
