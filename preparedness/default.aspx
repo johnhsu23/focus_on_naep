@@ -33,7 +33,7 @@
       </section>
       <section class="start-main">
         <header><h3>NAGB Preparedness Timeline</h3></header>
-        <p>Congress established the National Assessment Governing Board in 1988 and charged the Governing Board to take “appropriate actions needed to improve the form and use of the National Assessment” and to identify “appropriate achievement goals for each age and grade in each subject area to be tested under the National Assessment” (PL. 100-297). Between 1988 and 2002, participation in NAEP by schools and students remained relatively steady within each grade level. But, in 2002, the participation rate for 12th-grade dropped to 55% from its usual level of around 65%, prompting the Governing Board’s executive director at the time, Roy Truby, to call for action. This call ultimately led to an extensive and comprehensive research agenda aimed at reporting the preparedness of 12th-graders for postsecondary education and workplace training based on their NAEP performance.</p>  
+        <p>Congress established the National Assessment Governing Board in 1988 and charged the Governing Board to take "appropriate actions needed to improve the form and use of the National Assessment" and to identify “appropriate achievement goals for each age and grade in each subject area to be tested under the National Assessment” (PL. 100-297). Between 1988 and 2002, participation in NAEP by schools and students remained relatively steady within each grade level. But, in 2002, the participation rate for 12th-grade dropped to 55% from its usual level of around 65%, prompting the Governing Board’s executive director at the time, Roy Truby, to call for action. This call ultimately led to an extensive and comprehensive research agenda aimed at reporting the preparedness of 12th-graders for postsecondary education and workplace training based on their NAEP performance.</p>  
         <div class="timeline-content">
           <ul class="timeline-legend">
             <li class="type01">Commissions and Technical Panels</li>
@@ -260,7 +260,7 @@
       <div class="modal-content">
         <div class="content-details">
           <div class="content-box">
-            <p class="like-h3"></p>
+            <p class="like-h4"><span></span><span></span></p>
             <p></p>
             <a href="#" class="close-it"></a>
             <!-- <a id="hide1" href="#hide1" class="hide">+ Expand</a>
