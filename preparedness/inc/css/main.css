@@ -23,9 +23,14 @@ html {
   }
 }
 
+html.target {
+  background-color: rgba(0, 0, 0, 0.5);
+  overflow-y: hidden;
+}
+
 /* end reset */
-/* Add animation (Standard syntax) */
-@-webkit-keyframes for-the-modal {
+/* animation for when modal opens */
+@-webkit-keyframes modal-in {
   from {
     bottom: -700px;
     opacity: 0;
@@ -35,7 +40,7 @@ html {
     opacity: 1;
   }
 }
-@keyframes for-the-modal {
+@keyframes modal-in {
   from {
     bottom: -700px;
     opacity: 0;
@@ -46,6 +51,7 @@ html {
   }
 }
 
+/* animation for when modal closes */
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -265,31 +271,35 @@ main {
   display: none;
 }
 
-/* the modal styles */
+/* modal styles */
 .modal-overlay {
   background-color: rgba(0, 0, 0, 0.4);
   display: none;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   min-height: 100%;
   width: 100vw;
+  z-index: 1;
 }
 
-/* display modal with target */
-.modal-overlay:target {
-  display: table;
-  overscroll-behavior-y: contain;
-  position: absolute;
-}
-
-/* The modal box */
+/* modal box */
 .modal-dialog {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   vertical-align: middle;
+  width: 100%;
+  z-index: 2;
 }
 
-/* The modal's content */
+.modal-dialog:target {
+  display: table;
+}
+
+/* modal content */
 .modal-dialog .modal-content {
   background-color: #ffffff;
   margin: 10em 0;
@@ -297,12 +307,12 @@ main {
   position: relative;
   padding: 5em 0 0 0;
   height: 100%;
+  min-height: 100vh;
   width: 100%;
-  z-index: 1;
-  /* Add animation */
-  -webkit-animation-name: for-the-modal;
+  /* animation for modal in */
+  -webkit-animation-name: modal-in;
   -webkit-animation-duration: 0.5s;
-  animation-name: for-the-modal;
+  animation-name: modal-in;
   animation-duration: 0.5s;
 }
 
@@ -313,7 +323,6 @@ main {
   height: 100%;
   position: absolute;
   background: inherit;
-  z-index: -1;
   top: 0;
   -webkit-transform-origin: left top;
           transform-origin: left top;
@@ -323,6 +332,7 @@ main {
 
 .modal-dialog .modal-content .content-details {
   font-size: 2rem;
+  height: 100vh;
 }
 
 .modal-dialog .modal-content .content-details .content-box {
@@ -331,6 +341,30 @@ main {
   padding-bottom: 2em;
   position: relative;
   width: 1000px;
+}
+
+.modal-dialog .modal-content .content-details .content-box p {
+  padding-bottom: 1em;
+}
+
+.modal-dialog .modal-content .content-details .content-box .close-it::before {
+  background-color: #c69314;
+  content: "\2716  CLOSE";
+  color: #ffffff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 0.5em 1em;
+  position: absolute;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+  vertical-align: middle;
+  top: -6.7em;
+  right: 0;
+}
+
+.modal-dialog .modal-content .content-details .content-box .close-it:hover::before {
+  opacity: 0.7;
 }
 
 .modal-dialog .modal-content .content-details .content-box .like-h4 {
@@ -345,18 +379,8 @@ main {
   font-style: normal;
 }
 
-.modal-dialog .modal-content .content-details .content-box .close-it::before {
-  background-color: #c69314;
-  content: "\2716  CLOSE";
-  color: #ffffff;
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  padding: 0.5em 1em;
-  position: absolute;
-  vertical-align: middle;
-  top: -6.6em;
-  right: 0;
+.modal-dialog .modal-content .content-details .content-box .expand {
+  padding-bottom: 1em;
 }
 
 .modal-dialog .modal-content .content-details .content-box .expand::before {
