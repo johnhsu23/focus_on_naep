@@ -11,20 +11,28 @@
 }
 html {
   box-sizing: border-box;
-  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
-
+  font-size: 62.5%;
   @media only screen and (max-width: 1000px) {
       font-size: 50%;
+  }
+  &.target {
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow-y: hidden;
+    // transition: all 5s ease-in;
   }
 }
 /* end reset */
 
-/* Add animation (Standard syntax) */
-@keyframes for-the-modal {
+/* animation for when modal opens */
+@keyframes modal-in {
   from { bottom: -700px; opacity: 0; }
   to { bottom: 0; opacity: 1; }
 }
-
+/* animation for when modal closes */
+// @keyframes modal-out {
+//   from { bottom: 0; opacity: 1; }
+//   to { bottom: -700px; opacity: 0; }
+// }
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -185,11 +193,6 @@ main {
         left: -2.5em;
         transform:rotate(45deg);
       }
-      &:hover {
-        // background-color: #f1f1f1;
-        // transform: skewX(0.001deg);
-        // transition: transform .3s ease-in-out;
-      }
       h4 {
         font-weight: 500;
         padding-left: 1.5em;
@@ -205,31 +208,32 @@ main {
     }
   }
 }
-/* the modal styles */
+/* modal styles */
 .modal-overlay {
   background-color: rgba(0, 0, 0, 0.4);
   display: none;
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   height: 100%;
   min-height: 100%;
   width: 100vw;
+  z-index: 1;
 }
-
-/* display modal with target */
-.modal-overlay:target {
-  display: table;
-  overscroll-behavior-y: contain;
-  position: absolute;
-}
-
-/* The modal box */
+/* modal box */
 .modal-dialog {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
   vertical-align: middle;
+  width: 100%;
+  z-index: 2;
+  &:target {
+    display: table;
+  }
 }
-
-/* The modal's content */
+/* modal content */
 .modal-dialog .modal-content {
   background-color: #ffffff;
   margin: 10em 0;
@@ -237,13 +241,12 @@ main {
   position: relative;
   padding: 5em 0 0 0;
   height: 100%;
+  min-height: 100vh;
   width: 100%;
-  z-index: 1;
-
-  /* Add animation */
-  -webkit-animation-name: for-the-modal; 
+  /* animation for modal in */
+  -webkit-animation-name: modal-in; 
   -webkit-animation-duration: 0.5s; 
-  animation-name: for-the-modal;
+  animation-name: modal-in;
   animation-duration: 0.5s;
 
   &:before{
@@ -253,28 +256,23 @@ main {
     height: 100%;
     position: absolute;
     background: inherit;
-    z-index: -1;
+    // z-index: -1;
     top: 0;
     transform-origin: left top;
     transform: skewY(-3deg);
   }
   .content-details {
     font-size: 2rem;
+    height: 100vh;
+    // overflow-y: auto;
     .content-box {
       height: 100%;
       margin: 0 auto;
       padding-bottom: 2em;
       position: relative;
       width: 1000px;
-      .like-h4 {
-        color: #001971;
-        font-size: 2.4rem;
-        font-style: italic;
-        font-weight: 700;
-        span { 
-          display: block;
-          font-style: normal;
-        }
+      p {
+        padding-bottom: 1em;
       }
       .close-it {
         &::before {
@@ -286,12 +284,29 @@ main {
           letter-spacing: 0.1em;
           padding: 0.5em 1em;
           position: absolute;
+          transition: opacity 2s;
           vertical-align: middle;
-          top: -6.6em;
+          top: -6.7em;
           right: 0;
+        }
+        &:hover {
+          &::before {
+            opacity: 0.7;
+          }
+        }
+      }
+      .like-h4 {
+        color: #001971;
+        font-size: 2.4rem;
+        font-style: italic;
+        font-weight: 700;
+        span { 
+          display: block;
+          font-style: normal;
         }
       }
       .expand {
+        padding-bottom: 1em;
         &::before {
           color: #007367;
           content: "\271A Read More";
