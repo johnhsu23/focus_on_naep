@@ -16,7 +16,6 @@ $(function(){
 			$("#pull-up-modal p:nth-of-type(2)").html(_timelineContents[id].body);
 			_top = $(document).scrollTop();
 			// $("article.expanded-view").hide("slide", {direction: "down"}, 2000);
-			
 		})
 
 		$("div#pull-up-modal .close-it").on("click", function() {
