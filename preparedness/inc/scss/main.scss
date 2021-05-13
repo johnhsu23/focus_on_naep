@@ -222,22 +222,29 @@ main {
 }
 /* modal box */
 .modal-dialog {
-  display: none;
+  // display: none;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;
+  transition: all 0.5s;
   vertical-align: middle;
   width: 100%;
   z-index: 2;
   &:target {
-    display: table;
+    // display: table;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
   }
 }
 /* modal content */
 .modal-dialog .modal-content {
   background-color: #ffffff;
   margin: 10em 0;
-  overflow: visible;
+  overflow: visible;;
   position: relative;
   padding: 5em 0 0 0;
   height: 100%;
@@ -284,7 +291,7 @@ main {
           letter-spacing: 0.1em;
           padding: 0.5em 1em;
           position: absolute;
-          transition: opacity 2s;
+          transition: all 2s ease;
           vertical-align: middle;
           top: -6.7em;
           right: 0;
