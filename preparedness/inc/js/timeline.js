@@ -5,7 +5,7 @@ $(function(){
 		_timelineContents = data;
 		createEvents();
 	}).fail(function() {
-		alert("timeline content failed to load")
+		// alert("timeline content failed to load")
 	});
 
 	function createEvents() {
