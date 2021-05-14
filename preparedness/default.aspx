@@ -9,14 +9,7 @@
     <script src="inc/js/timeline.js"></script>
     <script>
       // alert("hello");
-      $(function(){
-        $('.event a').on('click', function(){
-          $('html').addClass('target');
-        })
-        $('.close-it').on('click', function(){
-          $('html').removeClass('target');
-        })
-      })
+      
       
     </script>
 </head>
