@@ -52,6 +52,27 @@ html.target {
 }
 
 /* animation for when modal closes */
+@-webkit-keyframes modal-out {
+  from {
+    bottom: 0;
+    opacity: 1;
+  }
+  to {
+    bottom: -700px;
+    opacity: 0;
+  }
+}
+@keyframes modal-out {
+  from {
+    bottom: 0;
+    opacity: 1;
+  }
+  to {
+    bottom: -700px;
+    opacity: 0;
+  }
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -272,19 +293,6 @@ main {
 }
 
 /* modal styles */
-.modal-overlay {
-  background-color: rgba(0, 0, 0, 0.4);
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  min-height: 100%;
-  width: 100vw;
-  z-index: 1;
-}
-
-/* modal box */
 .modal-dialog {
   visibility: hidden;
   opacity: 0;
@@ -292,8 +300,8 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  transition: visibility 0s linear 0.3s, opacity 0.3s linear;
   vertical-align: middle;
   width: 100%;
   z-index: 2;
@@ -302,6 +310,8 @@ main {
 .modal-dialog:target {
   visibility: visible;
   opacity: 1;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
   pointer-events: auto;
 }
 
@@ -315,11 +325,6 @@ main {
   height: 100%;
   min-height: 100vh;
   width: 100%;
-  /* animation for modal in */
-  -webkit-animation-name: modal-in;
-  -webkit-animation-duration: 0.5s;
-  animation-name: modal-in;
-  animation-duration: 0.5s;
 }
 
 .modal-dialog .modal-content:before {
@@ -353,6 +358,11 @@ main {
   padding-bottom: 1em;
 }
 
+.modal-dialog .modal-content .content-details .content-box .close-it {
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
 .modal-dialog .modal-content .content-details .content-box .close-it::before {
   background-color: #c69314;
   content: "\2716  CLOSE";
@@ -371,6 +381,13 @@ main {
 
 .modal-dialog .modal-content .content-details .content-box .close-it:hover::before {
   opacity: 0.7;
+}
+
+.modal-dialog .modal-content .content-details .content-box .close-it:target {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 
 .modal-dialog .modal-content .content-details .content-box .like-h4 {

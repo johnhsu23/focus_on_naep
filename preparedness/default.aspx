@@ -57,11 +57,11 @@
           </ul>
           <ul class="timeline">
             <li class="event" data-date="November 2002">
-              <h4 class="type01"><a id="112002" href="#november2002">National Commission on NAEP 12th-Grade Assessment and Reporting established</a></h4>
+              <h4 class="type01"><a href="#november2002">National Commission on NAEP 12th-Grade Assessment and Reporting established</a></h4>
               <p>Commissions and Technical Panels</p>
             </li>
             <li class="event" data-date="September 2003">
-              <h4 class="type02"><a id="092003" href="#september2003">Commissioned Paper: Evaluating the feasibility and usefulness of NAEP data on the preparedness of 12th-graders</a></h4>
+              <h4 class="type02"><a href="#september2003">Paper commissioned to evaluate the feasibility and usefulness of NAEP data on the preparedness of 12th-graders</a></h4>
               <p>Efforts to Evaluate Feasibility of Reporting Preparedness</p>    
             </li>
             <li class="event" id="date" data-date="March 2004">
@@ -288,7 +288,19 @@
     </div>
   </div>
 
-  <div class="modal-overlay"></div>
+  <div id="september2003" class="modal-dialog" role="dialog">
+    <div class="modal-content">
+      <div class="content-details">
+        <div class="content-box">
+          <a href="#close" class="close-it" tabindex="1" title="Close Dialog"></a>
+          <p class="like-h4"><span>September 2003</span>Paper commissioned to evaluate the feasibility and usefulness of NAEP data on the preparedness of 12th-graders</p>
+          <p>Michael Kirst, an expert on education research and policy, was commissioned to write a paper to evaluate the feasibility and usefulness of NAEP data on the preparedness of 12th-graders. College Preparation and Grade 12 NAEP was presented to the Governing Board in September 2003. The report pointed to the problems and challenges that this endeavor would face, but it was generally supportive of the goal (Kirst, 2003).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="modal-overlay"></div> -->
 
 
   <!-- <div id="pull-up-modal" class="modal-overlay">
