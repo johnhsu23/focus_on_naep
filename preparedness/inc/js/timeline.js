@@ -30,11 +30,14 @@ $(function(){
 		for(var i = 0; i < _timelineContents.length; i++) {
 			var clone = $(".modal-dialog:first").clone();
 			var id = _timelineContents[i].code;
+			$("ul.timeline li:nth-of-type(" + (i + 1) + ") a").attr("href", "#" + _timelineContents[i].code);
+
 			if($("#" + id).length == 0) {
 				clone.attr("id", id)
 				clone.find(".content-box p").remove();
 				clone.find(".content-box").append("<p class='like-h4'><span>" + _timelineContents[i].date + "</span>" + _timelineContents[i].title + "</p>");
 				clone.find(".content-box").append(_timelineContents[i].tier1);
+				// alert(_timelineContents[i].tier2)
 				clone.find(".content-box").append(_timelineContents[i].tier2);
 				$("body").append(clone);
 			}
@@ -43,5 +46,13 @@ $(function(){
 		var overlay = $(".modal-overlay")
 		// alert(overlay.length)
 		$("body").append(overlay);
+		$(function(){
+        $('.event a').on('click', function(){
+          $('html').addClass('target');
+        })
+        $('.close-it').on('click', function(){
+          $('html').removeClass('target');
+        })
+      })
 	}
 })
