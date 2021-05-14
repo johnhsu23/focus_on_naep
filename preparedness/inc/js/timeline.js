@@ -4,6 +4,7 @@ $(function(){
 	$.getJSON( "timeline_content.json", function( data ) {
 		_timelineContents = data;
 		createEvents();
+		addTimelineItems();
 	}).fail(function() {
 		// alert("timeline content failed to load")
 	});
@@ -23,5 +24,20 @@ $(function(){
 			// 	window.scrollTo(0, _top)	
 			// }, 100)
 		})
+	}
+
+	function addTimelineItems() {
+		for(var i = 0; i < _timelineContents.length; i++) {
+			var clone = $(".modal-dialog:first").clone();
+			var id = _timelineContents[i].code;
+			if($("#" + id).length == 0) {
+				clone.attr("id", id)
+				$("body").append(clone);
+			}
+			// alert(_timelineContents[i].date);
+		}
+		var overlay = $(".modal-overlay")
+		// alert(overlay.length)
+		$("body").append(overlay);
 	}
 })
