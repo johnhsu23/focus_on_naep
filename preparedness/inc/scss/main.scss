@@ -216,7 +216,7 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+  transition: visibility 0s linear 0.3s, opacity 0.3s linear;
   vertical-align: middle;
   width: 100%;
   z-index: 2;  
@@ -252,10 +252,10 @@ main {
   .content-details {
     font-size: 2rem;
     height: 100vh;
-    // overflow-y: auto;
     .content-box {
       height: 100%;
       margin: 0 auto;
+      
       padding-bottom: 2em;
       position: relative;
       width: 1000px;
@@ -270,6 +270,7 @@ main {
           color: #ffffff;
           font-size: 1.8rem;
           font-weight: 700;
+          
           letter-spacing: 0.1em;
           padding: 0.5em 1em;
           position: absolute;

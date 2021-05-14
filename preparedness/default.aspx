@@ -272,6 +272,7 @@
           <p>At Executive Director Roy Truby’s recommendation, the Governing Board established the National Commission on NAEP 12th-Grade Assessment and Reporting in 2002. The National Commission was charged with reviewing the 12th-grade assessment and developing recommendations for the Governing Board for improving it.</p>
           <p>Low participation rates by schools and students in 2002 had raised serious concerns about the viability of 12th-grade NAEP. An important consideration by the National Commission was whether NAEP should continue to assess students at the 12th-grade level, and the conclusion was a strong affirmative.</p>
           <p>The National Commission set forth recommendations for actions aimed at increasing interest in and the value of 12th-grade NAEP results. Reporting on the preparedness of 12th-graders for postsecondary education and work was seen as an important means for accomplishing that goal.</p>
+          
           <!-- <div class="tier-two">
             <a href="#" class="expand" tabindex="1" title="Read More"></a>
             <p></p>
