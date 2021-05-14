@@ -3,26 +3,39 @@ $(function(){
 	var _top;
 	$.getJSON( "timeline_content.json", function( data ) {
 		_timelineContents = data;
-		createEvents();
 		addTimelineItems();
+		createEvents();
 	}).fail(function() {
 		// alert("timeline content failed to load")
 	});
 
 	function createEvents() {
+		$(window).scroll(function() {
+			var scrollTop = $(window).scrollTop();
+			console.log(scrollTop);
+			  // if ( scrollTop > $(headerElem).offset().top ) { 
+			    // display add
+			  // }
+			// $(".modal-content").css("top", 500)
+		})
 		$("div.timeline-content .event a").on("click", function(){
 			// var id = $(this).attr("id")
 			// $("#pull-up-modal p.like-h4 span:nth-of-type(1)").html(_timelineContents[id].date);
 			// $("#pull-up-modal p.like-h4 span:nth-of-type(2)").html(_timelineContents[id].title);
 			// $("#pull-up-modal p:nth-of-type(2)").html(_timelineContents[id].body);
-			// _top = $(document).scrollTop();
-			// $("article.expanded-view").hide("slide", {direction: "down"}, 2000);
-		})
-
-		$("div#pull-up-modal .close-it").on("click", function() {
+			_top = $(document).scrollTop();
+			// $(".modal-content").css("top", $(document).scrollTop())
 			// setTimeout(function() {
 			// 	window.scrollTo(0, _top)	
 			// }, 100)
+			// $("article.expanded-view").hide("slide", {direction: "down"}, 2000);
+		})
+
+		// alert($("div.modal-dialog .close-it").length)
+		$("div.modal-dialog .close-it").on("click", function() {
+			setTimeout(function() {
+				window.scrollTo(0, _top)	
+			}, 100)
 		})
 	}
 
@@ -41,18 +54,15 @@ $(function(){
 				clone.find(".content-box").append(_timelineContents[i].tier2);
 				$("body").append(clone);
 			}
-			// alert(_timelineContents[i].date);
 		}
 		var overlay = $(".modal-overlay")
-		// alert(overlay.length)
 		$("body").append(overlay);
-		$(function(){
         $('.event a').on('click', function(){
           $('html').addClass('target');
         })
         $('.close-it').on('click', function(){
           $('html').removeClass('target');
         })
-      })
+      		
 	}
 })
