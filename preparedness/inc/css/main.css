@@ -30,49 +30,7 @@ html.target {
 
 /* end reset */
 /* animation for when modal opens */
-@-webkit-keyframes modal-in {
-  from {
-    bottom: -700px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
-}
-@keyframes modal-in {
-  from {
-    bottom: -700px;
-    opacity: 0;
-  }
-  to {
-    bottom: 0;
-    opacity: 1;
-  }
-}
-
 /* animation for when modal closes */
-@-webkit-keyframes modal-out {
-  from {
-    bottom: 0;
-    opacity: 1;
-  }
-  to {
-    bottom: -700px;
-    opacity: 0;
-  }
-}
-@keyframes modal-out {
-  from {
-    bottom: 0;
-    opacity: 1;
-  }
-  to {
-    bottom: -700px;
-    opacity: 0;
-  }
-}
-
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -300,8 +258,8 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  -webkit-transition: visibility 0s linear 0.3s, opacity 0.3s linear;
-  transition: visibility 0s linear 0.3s, opacity 0.3s linear;
+  -webkit-transition: visibility 0s linear 0.2s, opacity 0.2s linear;
+  transition: visibility 0s linear 0.2s, opacity 0.2s linear;
   vertical-align: middle;
   width: 100%;
   z-index: 2;
