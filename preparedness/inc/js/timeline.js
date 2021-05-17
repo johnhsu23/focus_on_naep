@@ -36,10 +36,12 @@ $(function(){
 		// alert($("div.modal-dialog .close-it").length)
 		$("div.modal-dialog .close-it").on("click", function() {
 			// alert(_top)
-			setTimeout(function() {
-				alert("inside");
-				alert(_top);
+			console.log("outside: " + _top)
+			var timeout setTimeout(function() {
+				// alert("inside");
+				// alert(_top);
 				// window.scrollTo(0, _top);
+				console.log("inside: " + _top)
 				document.body.scrollTop = _top;	
 			}, 100)
 		})
