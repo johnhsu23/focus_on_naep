@@ -62,11 +62,11 @@
               <p>Commissions and Technical Panels</p>    
             </li>
             <li class="event" data-date="2004">
-              <h4 class="type02"><a id="002004" href="#pull-up-modal">Papers commissioned on issues related to validity and standards for college, workforce, and military preparedness</a></h4>
+              <h4 class="type02"><a id="002004" href="#">Papers commissioned on issues related to validity and standards for college, workforce, and military preparedness</a></h4>
               <p>Efforts to Evaluate Feasibility of Reporting Preparedness</p>
             </li>
             <li class="event" data-date="February 2005">
-              <h4 class="type02">Achieve, Inc. Report: Evaluating the NAEP Reading Framework as a measure of preparedness</h4>
+              <h4 class="type02"><a href="#february2005">Achieve, Inc. Report: Evaluating the NAEP Reading Framework as a measure of preparedness</a></h4>
               <p>Efforts to Evaluate Feasibility of Reporting Preparedness</p>
             </li>
             <li class="event" data-date="May 2005">

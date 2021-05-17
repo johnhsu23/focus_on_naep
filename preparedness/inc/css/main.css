@@ -25,9 +25,8 @@ html {
 
 html.target {
   background-color: rgba(0, 0, 0, 0.5);
-  overflow-y: hidden;
-  -webkit-transition: all 5s ease-in;
-  transition: all 5s ease-in;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 
 /* end reset */
