@@ -1,4 +1,5 @@
 $(function(){
+
 	var _timelineContents;
 	var _top;
 	$.getJSON( "timeline_content.json", function( data ) {
@@ -6,13 +7,14 @@ $(function(){
 		addTimelineItems();
 		createEvents();
 	}).fail(function() {
+		console.log("JSON not loaded")
 		// alert("timeline content failed to load")
 	});
 
 	function createEvents() {
 		$(window).scroll(function() {
 			var scrollTop = $(window).scrollTop();
-			console.log(scrollTop);
+			// console.log(scrollTop);
 			  // if ( scrollTop > $(headerElem).offset().top ) { 
 			    // display add
 			  // }
@@ -33,8 +35,12 @@ $(function(){
 
 		// alert($("div.modal-dialog .close-it").length)
 		$("div.modal-dialog .close-it").on("click", function() {
+			// alert(_top)
 			setTimeout(function() {
-				window.scrollTo(0, _top)	
+				alert("inside");
+				alert(_top);
+				// window.scrollTo(0, _top);
+				document.body.scrollTop = _top;	
 			}, 100)
 		})
 	}
