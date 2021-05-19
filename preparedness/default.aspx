@@ -281,18 +281,6 @@
     </div>
   </div>
 
-  <div id="september2003" class="modal-dialog" role="dialog">
-    <div class="modal-content">
-      <div class="content-details">
-        <div class="content-box">
-          <a href="#" class="close-it" tabindex="1" title="Close Dialog"></a>
-          <p class="like-h4"><span>September 2003</span>Paper commissioned to evaluate the feasibility and usefulness of NAEP data on the preparedness of 12th-graders</p>
-          <p>Michael Kirst, an expert on education research and policy, was commissioned to write a paper to evaluate the feasibility and usefulness of NAEP data on the preparedness of 12th-graders. College Preparation and Grade 12 NAEP was presented to the Governing Board in September 2003. The report pointed to the problems and challenges that this endeavor would face, but it was generally supportive of the goal (Kirst, 2003).</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <!-- <div class="modal-overlay"></div> -->
 
 
