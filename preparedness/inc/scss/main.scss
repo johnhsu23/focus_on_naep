@@ -19,6 +19,7 @@ html {
     background-color: rgba(0, 0, 0, 0.5);
     // overflow-y: hidden;
     transition: all 0.5s ease-in;
+    z-index: 4;
   }
 }
 /* end reset */
@@ -106,6 +107,7 @@ main {
       position: absolute;
       left: 0;  
       top: -0.15em;
+      z-index: 1;
     }
     &.type01::before {
       color: rgb(192,0,0);
@@ -219,7 +221,7 @@ main {
   transition: visibility 0s linear 0.5s, opacity 0.1s linear;
   vertical-align: middle;
   width: 100%;
-  z-index: 2;  
+  z-index: 5;  
   &:target {
     visibility: visible;
     opacity: 1;

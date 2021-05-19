@@ -38,8 +38,8 @@
       </section>
       <section class="start-main">
         <header><h3>NAGB Preparedness Timeline</h3></header>
-        <p>The National Assessment of Educational Progress (NAEP) is a congressionally mandated program that is overseen and administered by the National Center for Education Statistics (NCES), within the U.S. Department of Education and the Institute of Education Sciences. Congress established the National Assessment Governing Board in 1988 and charged the Governing Board to take “appropriate actions needed to improve the form and use of the National Assessment” and to identify “appropriate achievement goals for each age and grade in each subject area to be tested under the National Assessment” (PL. 100-297).</p>
-        <p>Between 1988 and 2002, participation in NAEP by schools and students remained relatively steady within each grade level. But in 2002, the participation rate for 12th-grade students dropped to 55 percent from its usual level of around 65 percent, prompting the Governing Board’s executive director at the time, Roy Truby, to call for action. The National Commission on NAEP 12th-Grade Assessment and Reporting was appointed in response to this concern. The National Commission called for a “new vision for NAEP” and suggestions for achieving that included recommendations to increase interest in and the value of results for the 12th-grade NAEP assessments. This call ultimately led to an extensive and comprehensive research agenda aimed at reporting the preparedness of 12th-graders for postsecondary education and workplace training based on their NAEP performance.</p>
+        <p>The National Assessment of Educational Progress (NAEP) is a congressionally mandated program that is overseen and administered by the National Center for Education Statistics (NCES), within the U.S. Department of Education and the Institute of Education Sciences. Congress established the National Assessment Governing Board in 1988 and charged the Governing Board to take "appropriate actions needed to improve the form and use of the National Assessment" and to identify "appropriate achievement goals for each age and grade in each subject area to be tested under the National Assessment" (PL. 100-297).</p>
+        <p>Between 1988 and 2002, participation in NAEP by schools and students remained relatively steady within each grade level. But in 2002, the participation rate for 12th-grade students dropped to 55 percent from its usual level of around 65 percent, prompting the Governing Board's executive director at the time, Roy Truby, to call for action. The National Commission on NAEP 12th-Grade Assessment and Reporting was appointed in response to this concern. The National Commission called for a "new vision for NAEP" and suggestions for achieving that included recommendations to increase interest in and the value of results for the 12th-grade NAEP assessments. This call ultimately led to an extensive and comprehensive research agenda aimed at reporting the preparedness of 12th-graders for postsecondary education and workplace training based on their NAEP performance.</p>
         <p>This timeline traces the steps leading to the development and implementation of the research agenda and reporting of findings regarding preparedness of 12th-graders for postsecondary education and job training from 2002 until 2020. Key dates and activities are listed with the opportunity to review key findings and additional information for each step in the process. In addition to viewing the efforts chronologically, readers may also choose to focus specifically on the following categories of work, as delineated with the following icons:</p>
         <div class="timeline-content">
           <ul class="timeline-legend">
@@ -267,7 +267,7 @@
     <div class="modal-content">
       <div class="content-details">
         <div class="content-box">
-          <a href="" class="close-it" tabindex="1" title="Close Dialog"></a>
+          <a href="#" class="close-it" tabindex="1" title="Close Dialog"></a>
           <p class="like-h4"><span>November 2002</span>National Commission on NAEP 12th-Grade Assessment and Reporting established</p>
           <p>At Executive Director Roy Truby’s recommendation, the Governing Board established the National Commission on NAEP 12th-Grade Assessment and Reporting in 2002. The National Commission was charged with reviewing the 12th-grade assessment and developing recommendations for the Governing Board for improving it.</p>
           <p>Low participation rates by schools and students in 2002 had raised serious concerns about the viability of 12th-grade NAEP. An important consideration by the National Commission was whether NAEP should continue to assess students at the 12th-grade level, and the conclusion was a strong affirmative.</p>
@@ -285,7 +285,7 @@
     <div class="modal-content">
       <div class="content-details">
         <div class="content-box">
-          <a href="" class="close-it" tabindex="1" title="Close Dialog"></a>
+          <a href="#" class="close-it" tabindex="1" title="Close Dialog"></a>
           <p class="like-h4"><span>September 2003</span>Paper commissioned to evaluate the feasibility and usefulness of NAEP data on the preparedness of 12th-graders</p>
           <p>Michael Kirst, an expert on education research and policy, was commissioned to write a paper to evaluate the feasibility and usefulness of NAEP data on the preparedness of 12th-graders. College Preparation and Grade 12 NAEP was presented to the Governing Board in September 2003. The report pointed to the problems and challenges that this endeavor would face, but it was generally supportive of the goal (Kirst, 2003).</p>
         </div>
