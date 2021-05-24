@@ -1,0 +1,31 @@
+.details {
+    padding-bottom: 1em;
+    &__state { display: none; }
+    &__state ~ &__trigger::before {
+        color: #007367;
+        content: "\271A \00A0 Show Details";
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        position: absolute;
+        text-transform: uppercase;
+        right: 0;
+    }
+    &__state:checked ~ &__trigger::before {
+        content: "\2212 \00A0 Hide Details";
+    }
+    &__trigger {
+        cursor: pointer;
+        display: inline-block;
+        padding: 0.5em 0;
+    }
+    &__contents {
+        opacity: 0;
+        max-height: 0;
+        transition: .2s ease;
+    }
+    &__state:checked ~ &__contents {
+        opacity: 1;
+        max-height: 999em;
+    }
+}

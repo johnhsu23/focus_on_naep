@@ -262,8 +262,40 @@
       </section>
     </article>
   </main>
+  <div id="november2002" class="modal" role="modal">
+    <div class="modal__wrapper">
+
+    <div class="modal__content">
+      <div class="modal__details">
+        <a href="#" class="modal__close" tabindex="1" title="Close Dialog"></a>
+        <div class="modal__text">
+          <p class="like-h4"><span>November 2002</span>National Commission on NAEP 12th-Grade Assessment and Reporting established</p>
+          <p>At Executive Director Roy Truby’s recommendation, the Governing Board established the National Commission on NAEP 12th-Grade Assessment and Reporting in 2002. The National Commission was charged with reviewing the 12th-grade assessment and developing recommendations for the Governing Board for improving it.</p>
+          <p>Low participation rates by schools and students in 2002 had raised serious concerns about the viability of 12th-grade NAEP. An important consideration by the National Commission was whether NAEP should continue to assess students at the 12th-grade level, and the conclusion was a strong affirmative.</p>
+          <p>The National Commission set forth recommendations for actions aimed at increasing interest in and the value of 12th-grade NAEP results. Reporting on the preparedness of 12th-graders for postsecondary education and work was seen as an important means for accomplishing that goal.</p>
+          <div class="details">
+            <input type="checkbox" class="details__state" id="open-more">
+            <div class="details__contents">
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laudantium perferendis iusto modi deserunt repellendus aliquid mollitia officia! Velit, exercitationem? Minima maxime repudiandae quae laboriosam impedit ipsam vitae dolore distinctio. Lorem ipsum dolor sit amet consectetur</p> 
+              <p>adipisicing elit. Eligendi ipsam magnam sequi, voluptatum consequatur iusto iure eaque at commodi, odio vitae eius. Amet explicabo assumenda aut ea voluptate corporis ab.  Lorem ipsum Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi qui harum incidunt, molestiae quis fuga fugiat adipisci voluptates nulla nemo optio ratione illum odit cum nihil mollitia quos culpa minima.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus laudantium perferendis iusto modi deserunt repellendus aliquid mollitia officia! Velit, exercitationem? Minima maxime repudiandae quae laboriosam impedit ipsam vitae dolore distinctio. Lorem ipsum dolor sit amet consectetur</p> 
+              <p>Consectetur adipisicing elit minus laudantium perferendis:</p>
+              <ul>
+                <li>Eligendi modi deserunt repellendus aliquid mollitia</li>
+                <li>Voluptatum consequatur iusto iure eaque at commodi</li>
+                <li>Minus laudantium perferendis iusto modi deserunt repellendus</li>
+              </ul>
+            </div>
+            <label for="open-more" class="details__trigger" tabindex="1" title="Show Details"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
   
-  <div id="november2002" class="modal-dialog" role="dialog">
+  <!-- <div id="november2002" class="modal-dialog" role="dialog">
     <div class="modal-content">
       <div class="content-details">
         <div class="content-box">
@@ -272,14 +304,10 @@
           <p>At Executive Director Roy Truby’s recommendation, the Governing Board established the National Commission on NAEP 12th-Grade Assessment and Reporting in 2002. The National Commission was charged with reviewing the 12th-grade assessment and developing recommendations for the Governing Board for improving it.</p>
           <p>Low participation rates by schools and students in 2002 had raised serious concerns about the viability of 12th-grade NAEP. An important consideration by the National Commission was whether NAEP should continue to assess students at the 12th-grade level, and the conclusion was a strong affirmative.</p>
           <p>The National Commission set forth recommendations for actions aimed at increasing interest in and the value of 12th-grade NAEP results. Reporting on the preparedness of 12th-graders for postsecondary education and work was seen as an important means for accomplishing that goal.</p>
-          <!-- <div class="tier-two">
-            <a href="#" class="expand" tabindex="1" title="Read More"></a>
-            <p></p>
-          </div> -->
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- <div class="modal-overlay"></div> -->
 
