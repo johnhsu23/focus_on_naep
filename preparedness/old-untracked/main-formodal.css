@@ -59,7 +59,7 @@
 }
 
 .modal__details {
-  background-color: #ffffff;
+  background-color: white;
   margin: 4rem auto;
   position: relative;
   width: 1000px;
@@ -80,19 +80,6 @@
 
 .modal__text ul li, .modal__text ol li {
   padding-bottom: 1em;
-}
-
-.modal .references {
-  font-size: 1.2rem;
-  color: #767676;
-}
-
-.modal .references a {
-  color: inherit;
-}
-
-.modal .references a:hover {
-  opacity: 0.8;
 }
 
 .modal:target {
@@ -130,6 +117,19 @@
   }
 }
 
+.modal__close:link, .modal__close:visited {
+  color: black;
+  position: absolute;
+  top: 2.5rem;
+  right: 2.5rem;
+  font-size: 3rem;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  line-height: 1;
+}
+
 .modal__close::before {
   background-color: #c69314;
   content: "\2716 \00A0 CLOSE";
@@ -139,15 +139,13 @@
   letter-spacing: 0.1em;
   padding: 0.5em 1em;
   position: absolute;
-  -webkit-transition: all 2s ease;
-  transition: all 2s ease;
   vertical-align: middle;
   top: -7.37em;
   right: 0;
 }
 
 .modal__close:hover {
-  opacity: 0.8;
+  color: grey;
 }
 
 .details {
@@ -216,14 +214,14 @@ html {
   }
 }
 
-/* end reset */
 html.target {
   overflow-y: hidden;
   padding-right: 15px;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
 }
 
+/* end reset */
+/* animation for when modal opens */
+/* animation for when modal closes */
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
