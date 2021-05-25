@@ -34,7 +34,8 @@ $(function(){
 			// $("article.expanded-view").hide("slide", {direction: "down"}, 2000);
 		})
 
-		$("div.modal-dialog .close-it").on("click", function() {
+		$("div.modal .modal__close").on("click", function() {
+			$('html').removeClass('target');
 			var timeout = setTimeout(function() {
 			window.scrollTo(0, _top);
 				// console.log("inside: " + _top)
@@ -67,13 +68,18 @@ $(function(){
 				// alert(_timelineContents[i].tier2)
 				clone.find(".modal__text .details__contents").html("");
 				clone.find(".modal__text .details__contents").append(_timelineContents[i].tier2);
+				if(!_timelineContents[i].tier2) {
+					clone.find(".modal__text .details__trigger").remove();
+				}
 				var footnoteIndexes = _timelineContents[i].footnoteIndexes;
 				// var footnotes = _timelineContents[i].
 				// alert(footnoteIndexes)
+				clone.find(".modal__text .details input").attr("id", "open-more" + i);
+				clone.find(".modal__text .details label").attr("for", "open-more" + i);
 				if(footnoteIndexes) {
 					for(var j = 0; j < footnoteIndexes.length; j++) {
 						var index = footnoteIndexes[j];
-						clone.find(".content-box").append(_footnotes[index]);
+						clone.find(".modal__text .references").append(_footnotes[index]);
 					}
 				}
 				if(i != 0)
@@ -85,8 +91,6 @@ $(function(){
         $('.event a').on('click', function(){
           $('html').addClass('target');
         })
-        $('.close-it').on('click', function(){
-          
-        })      		
+     		
 	}
 })
