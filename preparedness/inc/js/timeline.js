@@ -46,7 +46,8 @@ $(function(){
 
 	function addTimelineItems() {
 		for(var i = 0; i < _timelineContents.length; i++) {
-			var clone = (i == 0) ? $(".modal-dialog:first") : $(".modal-dialog:first").clone();
+			// var clone = (i == 0) ? $(".modal-dialog:first") : $(".modal-dialog:first").clone();
+			var clone = (i == 0) ? $(".modal:first") : $(".modal:first").clone();
 			var id = _timelineContents[i].code;
 			$("ul.timeline li:nth-of-type(" + (i + 1) + ")").attr("data-date", _timelineContents[i].date);
 			if($("ul.timeline li:nth-of-type(" + (i + 1) + ") a").length == 0) {
@@ -59,11 +60,13 @@ $(function(){
 			// }
 			// if($("#" + id).length == 0) {
 				clone.attr("id", id)
-				clone.find(".content-box p").remove();
-				clone.find(".content-box").append("<p class='like-h4'><span>" + _timelineContents[i].date + "</span>" + _timelineContents[i].title + "</p>");
-				clone.find(".content-box").append(_timelineContents[i].tier1);
+				clone.find(".modal__text p").remove();
+				clone.find(".modal__text").prepend(_timelineContents[i].tier1);
+				clone.find(".modal__text").prepend("<p class='like-h4'><span>" + _timelineContents[i].date + "</span>" + _timelineContents[i].title + "</p>");
+				
 				// alert(_timelineContents[i].tier2)
-				clone.find(".content-box").append(_timelineContents[i].tier2);
+				clone.find(".modal__text .details__contents").html("");
+				clone.find(".modal__text .details__contents").append(_timelineContents[i].tier2);
 				var footnoteIndexes = _timelineContents[i].footnoteIndexes;
 				// var footnotes = _timelineContents[i].
 				// alert(footnoteIndexes)
