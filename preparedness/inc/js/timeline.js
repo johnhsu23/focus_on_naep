@@ -36,19 +36,18 @@ $(function(){
 
 		$("div.modal .modal__close").on("click", function() {
 			$('html').removeClass('target');
+			$(this).parent().find(".details__state").prop("checked", false);
 			var timeout = setTimeout(function() {
-			window.scrollTo(0, _top);
-				// console.log("inside: " + _top)
-				// document.body.scrollTop = _top;	
+				window.scrollTo(0, _top);
 			}, 100)
-			$('html').removeClass('target');
 		})
 	}
 
 	function addTimelineItems() {
 		for(var i = 0; i < _timelineContents.length; i++) {
 			// var clone = (i == 0) ? $(".modal-dialog:first") : $(".modal-dialog:first").clone();
-			var clone = (i == 0) ? $(".modal:first") : $(".modal:first").clone();
+			// var clone = (i == 0) ? $(".modal:first") : $(".modal:first").clone();
+			var clone = $(".modal:first").clone()
 			var id = _timelineContents[i].code;
 			$("ul.timeline li:nth-of-type(" + (i + 1) + ")").attr("data-date", _timelineContents[i].date);
 			if($("ul.timeline li:nth-of-type(" + (i + 1) + ") a").length == 0) {
@@ -60,34 +59,35 @@ $(function(){
 			// 	clone = $(".modal-dialog:first")
 			// }
 			// if($("#" + id).length == 0) {
-				clone.attr("id", id)
-				clone.find(".modal__text p").remove();
-				clone.find(".modal__text").prepend(_timelineContents[i].tier1);
-				clone.find(".modal__text").prepend("<p class='like-h4'><span>" + _timelineContents[i].date + "</span>" + _timelineContents[i].title + "</p>");
-				
-				// alert(_timelineContents[i].tier2)
-				clone.find(".modal__text .details__contents").html("");
-				clone.find(".modal__text .details__contents").append(_timelineContents[i].tier2);
-				if(!_timelineContents[i].tier2) {
-					clone.find(".modal__text .details__trigger").remove();
+			clone.attr("id", id)
+			clone.find(".modal__text p").remove();
+			clone.find(".modal__text").prepend(_timelineContents[i].tier1);
+			clone.find(".modal__text").prepend("<p class='like-h4'><span>" + _timelineContents[i].date + "</span>" + _timelineContents[i].title + "</p>");
+			
+			// alert(_timelineContents[i].tier2)
+			clone.find(".modal__text .details__contents").html("");
+			clone.find(".modal__text .details__contents").append(_timelineContents[i].tier2);
+			if(!_timelineContents[i].tier2) {
+				clone.find(".modal__text .details__trigger").remove();
+			}
+			var footnoteIndexes = _timelineContents[i].footnoteIndexes;
+			// var footnotes = _timelineContents[i].
+			// alert(footnoteIndexes)
+			clone.find(".modal__text .details input").attr("id", "open-more" + i);
+			clone.find(".modal__text .details label").attr("for", "open-more" + i);
+			if(footnoteIndexes) {
+				for(var j = 0; j < footnoteIndexes.length; j++) {
+					var index = footnoteIndexes[j];
+					clone.find(".modal__text .references").append(_footnotes[index]);
 				}
-				var footnoteIndexes = _timelineContents[i].footnoteIndexes;
-				// var footnotes = _timelineContents[i].
-				// alert(footnoteIndexes)
-				clone.find(".modal__text .details input").attr("id", "open-more" + i);
-				clone.find(".modal__text .details label").attr("for", "open-more" + i);
-				if(footnoteIndexes) {
-					for(var j = 0; j < footnoteIndexes.length; j++) {
-						var index = footnoteIndexes[j];
-						clone.find(".modal__text .references").append(_footnotes[index]);
-					}
-				} else {
-					clone.find(".modal__text .references").remove();
-				}
-				if(i != 0)
-					$("body").append(clone);
+			} else {
+				clone.find(".modal__text .references").remove();
+			}
+			// if(i != 0)
+			$("body").append(clone);
 			// }
 		}
+		$(".modal:first").remove();
 		// var overlay = $(".modal-overlay")
 		// $("body").append(overlay);
         $('.event a').on('click', function(){
