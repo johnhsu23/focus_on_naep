@@ -81,6 +81,8 @@ $(function(){
 						var index = footnoteIndexes[j];
 						clone.find(".modal__text .references").append(_footnotes[index]);
 					}
+				} else {
+					clone.find(".modal__text .references").remove();
 				}
 				if(i != 0)
 					$("body").append(clone);
