@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAEP Preparedness Timeline</title>
-    <link href="inc/css/main.css" rel="stylesheet" />
+    <link href="inc/css/main-nf.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="inc/js/timeline.js"></script>
     <script>
@@ -262,13 +262,16 @@
       </section>
     </article>
   </main>
-  <div id="november2002" class="modal" role="modal">
+ 
+  
+
+
+   <div id="november2002" class="modal" role="modal">
     <div class="modal__wrapper">
       
       <div class="modal__content">
-        <a href="#" class="modal__close" tabindex="1" aria-label="Close dialog" title="Close Dialog"></a>
+        <a href="#" class="modal__close" tabindex="1" title="Close Dialog"></a>
         <div class="modal__details">
-          <!-- <a href="#" class="modal__close" tabindex="1" aria-label="Close dialog" title="Close Dialog"></a> -->
           <div class="modal__text">
             <p class="like-h4"><span>November 2002</span> National Commission on NAEP 12th-Grade Assessment and Reporting established</p>
             <p>At Executive Director Roy Truby’s recommendation, the Governing Board established the National Commission on NAEP 12th-Grade Assessment and Reporting in 2002. The National Commission was charged with reviewing the 12th-grade assessment and developing recommendations for the Governing Board for improving it.</p>
@@ -287,15 +290,15 @@
                   <li>Minus laudantium perferendis iusto modi deserunt repellendus</li>
                 </ul>
               </div>
-              <label for="open-more" class="details__trigger" tabindex="1" title="Show or Hide Details"></label>
-            </div><!-- end details div -->
+              <label for="open-more" class="details__trigger" tabindex="1" title="Show Details"></label>
+            </div>
             <div class="references">
               <p>Consequatur iusto iure eaque at commodi, odio vitae eius perferendis iusto modi deserunt <a href="">http://www.thisisaplaceholder.com/lorem/ipsum/</a>repellendus aliquid mollitia officia</p>
-            </div><!-- end references div -->
-          </div><!-- end modal text div -->
-        </div><!-- end modal details div -->
-      </div><!-- end modal content div -->
-    </div><!-- end modal wrapper div -->
-  </div><!-- end modal div -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

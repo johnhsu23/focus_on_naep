@@ -18,13 +18,19 @@
         cursor: pointer;
         display: inline-block;
         padding: 0.5em 0;
+        transition: all 0.2s ease;
+        &:hover {
+            opacity: 0.8;
+        }
     }
     &__contents {
+        display: none;
         opacity: 0;
         max-height: 0;
         transition: .2s ease;
     }
     &__state:checked ~ &__contents {
+        display: table;
         opacity: 1;
         max-height: 999em;
     }
