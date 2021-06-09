@@ -49,12 +49,37 @@ $(function(){
 			// var clone = (i == 0) ? $(".modal:first") : $(".modal:first").clone();
 			var clone = $(".modal:first").clone()
 			var id = _timelineContents[i].code;
+
+			var firstTimelineItem = $("ul.timeline li:first");
+			var newTimelineItem =$("ul.timeline li:nth-of-type(" + (i + 1) + ")");
+			if(newTimelineItem.length == 0) {
+				firstTimelineItem.parent().append(firstTimelineItem.clone());
+				newTimelineItem =$("ul.timeline li:nth-of-type(" + (i + 1) + ")");
+				newTimelineItem.find("a").html(_timelineContents[i].title);
+			}
+
 			$("ul.timeline li:nth-of-type(" + (i + 1) + ")").attr("data-date", _timelineContents[i].date);
 			if($("ul.timeline li:nth-of-type(" + (i + 1) + ") a").length == 0) {
 				$("ul.timeline li:nth-of-type(" + (i + 1) + ") h4").html("<a>" + _timelineContents[i].title + "</a>");	
 			}
 			$("ul.timeline li:nth-of-type(" + (i + 1) + ") a").attr("href", "#" + _timelineContents[i].code);
-
+			var category = _timelineContents[i].category
+			if(category) {
+				var categoryClass = null;
+				if(category == "Commissions and Technical Panels") {
+					categoryClass = "type01";
+				} else if(category == "Efforts to Evaluate Feasibility of Reporting Preparedness") {
+					categoryClass = "type02";
+				}  
+				else if(category == "Governing Board Actions and Decisions") {
+					categoryClass = "type03";
+				} else if (category == "Efforts to Produce Reference Points for Reporting Preparedness") {
+					categoryClass = "type04";
+				}
+				if(categoryClass) {
+					$("ul.timeline li:nth-of-type(" + (i + 1) + ") h4").attr("class", categoryClass);	
+				}			
+			}
 			// if(i == 0) {
 			// 	clone = $(".modal-dialog:first")
 			// }
