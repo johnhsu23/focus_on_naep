@@ -283,6 +283,7 @@ main {
 .main-content {
   font-size: 1.6rem;
   margin: 0 auto;
+  padding: 1em 0;
   width: 1000px;
 }
 
@@ -301,6 +302,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  padding-left: 1em;
 }
 
 .start-intro .flex-column {
@@ -329,11 +331,15 @@ main {
   text-align: center;
 }
 
+.start-intro p {
+  line-height: 2;
+}
+
 .start-main header {
   background-color: #007367;
   line-height: 2;
   margin: 1em 0;
-  padding-left: 0.5em;
+  padding-left: 1em;
 }
 
 .start-main header h3 {
@@ -343,7 +349,9 @@ main {
 }
 
 .start-main p {
+  line-height: 2;
   padding-bottom: 1em;
+  padding-left: 1em;
 }
 
 .timeline-content {

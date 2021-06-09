@@ -30,6 +30,7 @@ main {
 .main-content {
   font-size: 1.6rem;
   margin: 0 auto;
+  padding: 1em 0;
   width: 1000px;
 }
 .start-intro {
@@ -41,6 +42,7 @@ main {
   }
   .flex-row {
     flex-direction: row;
+    padding-left: 1em;
   }
   .flex-column {
     flex-direction: column;
@@ -56,20 +58,27 @@ main {
       text-align: center;
     }
   }
+  p {
+    line-height: 2;
+  }
 }
 .start-main {
   header {
     background-color: rgb(0, 115, 103);
     line-height: 2;
     margin: 1em 0;
-    padding-left: 0.5em;
+    padding-left: 1em;
     h3 {
       color: #ffffff;
       font-size: 1.5em;
       font-weight: 500;
     }
   }
-  p { padding-bottom: 1em; }
+  p {
+    line-height: 2; 
+    padding-bottom: 1em; 
+    padding-left: 1em;
+  }
 }
 .timeline-content {
   margin-top: 3.25rem;
