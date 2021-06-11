@@ -41,6 +41,25 @@ $(function(){
 				window.scrollTo(0, _top);
 			}, 100)
 		})
+
+		$("div.timeline-content ul.timeline-legend li").on("click", function(){
+			if(!$(this).hasClass("active")) var turnOn = true;
+			$("div.timeline-content ul.timeline-legend li").removeClass("active")
+			if(turnOn) {
+				$(this).addClass("active")
+			}
+			var typeClass;
+			if($(this).hasClass("type01")) typeClass = "type01";
+			if($(this).hasClass("type02")) typeClass = "type02";
+			if($(this).hasClass("type03")) typeClass = "type03";
+			if($(this).hasClass("type04")) typeClass = "type04"; 
+			if($(this).hasClass("active")) {
+				$("ul.timeline li h4").parent().hide();
+				$("ul.timeline li h4." + typeClass).parent().show();
+			} else {
+				$("ul.timeline li h4").parent().show();
+			}
+		})
 	}
 
 	function addTimelineItems() {
