@@ -371,11 +371,12 @@ main {
 
 .timeline-content [class^=type]:hover {
   opacity: 0.7;
+  cursor: pointer;
 }
 
 .timeline-content [class^=type].active {
   background-color: rgba(198, 147, 20, 0.2);
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .timeline-content [class^=type]::before {
