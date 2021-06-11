@@ -20,9 +20,12 @@
         <div class="flex-body">
           <div class="flex-row">
             <h2>Preparedness Introduction</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim neque volutpat ac tincidunt vitae. Neque volutpat ac tincidunt vitae semper quis lectus. Scelerisque eu ultrices vitae auctor eu augue ut. Urna et pharetra pharetra massa. Arcu risus quis varius quam quisque id diam vel quam. Rhoncus aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque. Sed pulvinar proin gravida hendrerit.</p>
+            <p>Since 2002, the National Assessment Government Board has been researching how the NAEP grade 12 assessments in mathematics and reading can be used to understand whether twelfth-grade students in the nation are prepared for postsecondary life. The timeline below provides details on this research and links to multiple studies that have been carried out in this area. Forthcoming secondary analysis articles will further examine what the NAEP data can tell us about postsecondary activities twelfth-graders are engaged in, and how socio-economic and other key factors are related to achievement outcomes.</p>
           </div>
           <div class="flex-column">
+            <img src="inc/css/images/placeholder.jpg" border="0" alt="photo of a group of college graduates in cap and gown" /> 
+          </div>
+          <!-- <div class="flex-column">
             <figure>
               <img src="inc/css/images/timeline-info-graphic.png" border="0" width="250" height="100" alt="info graphic show open book" />
               <figcaption>Grade 12 postsecondary activities and learning approaches</figcaption>
@@ -34,7 +37,7 @@
               <figcaption>Socioeconomic factors, postsecondary activities, and racial/ethnic gap</figcaption>
             </figure>
           </div>
-        </div>
+        </div> -->
       </section>
       <section class="start-main">
         <header><h3>NAGB Preparedness Timeline</h3></header>
@@ -42,6 +45,7 @@
         <p>Between 1988 and 2002, participation in NAEP by schools and students remained relatively steady within each grade level. But in 2002, the participation rate for 12th-grade students dropped to 55 percent from its usual level of around 65 percent, prompting the Governing Board's executive director at the time, Roy Truby, to call for action. <em>The National Commission on NAEP 12th-Grade Assessment and Reporting</em> was appointed in response to this concern. The National Commission called for a "new vision for NAEP" and suggestions for achieving that included recommendations to increase interest in and the value of results for the 12th-grade NAEP assessments. This call ultimately led to an extensive and comprehensive research agenda aimed at reporting the preparedness of 12th-graders for postsecondary education and workplace training based on their NAEP performance.</p>
         <p>This timeline traces the steps leading to the development and implementation of the research agenda and reporting of findings regarding preparedness of 12th-graders for postsecondary education and job training from 2002 until 2020. Key dates and activities are listed with the opportunity to review key findings and additional information for each step in the process. In addition to viewing the efforts chronologically, readers may also choose to focus specifically on the following categories of work, as delineated with the following icons:</p>
         <div class="timeline-content">
+          <p class="topic-hdr">Filter by category</p>
           <ul class="timeline-legend">
             <li class="type01">Commissions and Technical Panels</li>
             <li class="type02">Efforts to Evaluate Feasibility of Reporting Preparedness</li>

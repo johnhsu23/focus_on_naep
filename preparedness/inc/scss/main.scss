@@ -43,6 +43,7 @@ main {
   .flex-row {
     flex-direction: row;
     padding-left: 1em;
+    width: 60%;
   }
   .flex-column {
     flex-direction: column;
@@ -50,6 +51,11 @@ main {
     align-items: center;
     justify-content: center;
     display: flex;
+    width: 40%;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
   figure {
     border: 1px solid rgb(0, 115, 103);
@@ -84,13 +90,20 @@ main {
   margin-top: 3.25rem;
   margin-bottom: 3em;
   text-align: center; 
+  transition: all 0.2s ease;
   [class^=type] {
+    &:hover {
+      opacity: 0.7;
+    }
+    &.active {
+      background-color: rgba(198, 147, 20, 0.2);
+      font-weight: 800;
+    }
     &::before { 
       font-size: 1.2em;
       position: absolute;
       left: 0;  
       top: 0;
-      // z-index: 1;
     }
     &.type01::before {
       color: rgb(192,0,0);
@@ -109,16 +122,31 @@ main {
       content:"\2BC1";
     }
   }
+  .topic-hdr {
+    border-bottom: 2px solid #c69314;
+    color: #007367;
+    display: block;
+    font-size: 1.7rem;
+    font-weight: 700;
+    margin-bottom: 1em;
+    padding: 0;
+    text-align: left;
+    text-transform: uppercase;
+    width: 100%;
+  }
   ul.timeline-legend {
-    border: 1px solid grey;
-    border-radius: 0.175em;
+    // border: 1px solid #c69314;
+    // border-radius: 0.175em;
     display: flex;
     justify-content: space-between;
     list-style: none;
     position: relative;
     text-align: left;
     li {
-      border-right: 1px solid grey ;
+      // border-right: 1px solid #c69314;
+      border-width: 1px 0 1px 1px;
+      border-style: solid;
+      border-color: #c69314;
       flex-grow: 1;
       flex-shrink: 1;
       flex-basis: 0;
@@ -130,8 +158,13 @@ main {
         padding-left: 0.5em;
         top: 0.1em;
       }
+      &:first-child {
+        border-radius: 0.175em 0 0 0.175em;
+      }
       &:last-child {
-        border-right: none;
+        border-right-width: 1px;
+        // border-right: 1px solid #c69314;
+        border-radius: 0 0.175em 0.175em 0;
       }
     }
   } 
@@ -148,7 +181,6 @@ main {
     text-align: left;
     li.event {
       padding-bottom: 3em;
-      margin-bottom: 3em;
       position: relative;
       &:last-of-type { 
         padding-bottom: 0;
@@ -161,16 +193,12 @@ main {
       }
       &:before {
         content: attr(data-date);
-        // display: inline-block;
         font-size: 1.3em;
         font-weight: 700;
-        // line-height: 1.2;
         line-height: 1.4;
-        // left: -8em;
         left: -12em;
         top: 0;
         text-align: right;
-        // width: 5em;
         width: 9em;
       }
       &:after {
