@@ -1,0 +1,25 @@
+html {
+    &.target {
+      overflow-y: hidden;
+      padding-right: 15px;
+      transition: all 0.5s ease-in;
+    }
+  }
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  a { 
+    color: $color-primary-3;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+    &:hover {
+      text-decoration: none;
+      opacity: 0.8;
+    }
+  }
+  main {
+    margin: 0 auto;/* this should be removed when moved to NCES website */
+    width: 1000px;/* this should be removed when moved to NCES website */
+  }

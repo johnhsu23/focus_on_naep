@@ -2,7 +2,7 @@
     padding-bottom: 1em;
     &__state { display: none; }
     &__state ~ &__trigger::before {
-        color: #007367;
+        color: $color-primary-3;
         content: "\271A \00A0 Show Details";
         font-size: 2rem;
         font-weight: 700;
