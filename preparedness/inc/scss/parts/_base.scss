@@ -1,7 +1,7 @@
 html {
     &.target {
+      padding-right: 1em;
       overflow-y: hidden;
-      padding-right: 15px;
       transition: all 0.5s ease-in;
     }
   }

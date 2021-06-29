@@ -45,7 +45,31 @@
         <p>Between 1988 and 2002, participation in NAEP by schools and students remained relatively steady within each grade level. But in 2002, the participation rate for 12th-grade students dropped to 55 percent from its usual level of around 65 percent, prompting the Governing Board's executive director at the time, Roy Truby, to call for action. <em>The National Commission on NAEP 12th-Grade Assessment and Reporting</em> was appointed in response to this concern. The National Commission called for a "new vision for NAEP" and suggestions for achieving that included recommendations to increase interest in and the value of results for the 12th-grade NAEP assessments. This call ultimately led to an extensive and comprehensive research agenda aimed at reporting the preparedness of 12th-graders for postsecondary education and workplace training based on their NAEP performance.</p>
         <p>This timeline traces the steps leading to the development and implementation of the research agenda and reporting of findings regarding preparedness of 12th-graders for postsecondary education and job training from 2002 until 2020. Key dates and activities are listed with the opportunity to review key findings and additional information for each step in the process. In addition to viewing the efforts chronologically, readers may also choose to focus specifically on the following categories of work, as delineated with the following icons:</p>
         <div class="timeline-content">
-          <p class="topic-hdr">Filter by category</p>
+          <p class="topic-hdr">Filter by</p>
+          <div class="selectors">
+            <div class="selector">
+              <label class="selector__label" for="student-group-selector">Select a Student Group</label> 
+              <div class="selector__select">
+                <div class="selectability" role="combobox application" tabindex="0" aria-expanded="true" aria-labelledby="" aria-disabled="false" aria-required="false">
+                  <div role="textbox" tabindex="-1" aria-readonly="true">White</div>
+                  <div role="listbox" tabindex="-1" aria-multiselectable="false">
+                    <div role="option" tabindex="-1" aria-disabled="false" aria-selected="true">White</div>
+                    <div role="option" tabindex="-1" aria-disabled="false" aria-selected="false">Black</div>
+                    <div role="option" tabindex="-1" aria-disabled="false" aria-selected="false">Hispanic</div>
+                    <div role="option" tabindex="-1" aria-disabled="false" aria-selected="false">Asian</div>
+                    <div role="option" tabindex="-1" aria-disabled="false" aria-selected="false">Eligible for National School Lunch Program (NSLP)</div>
+                  </div>
+                </div>
+                <select data-student-groups="" id="student-group-selector" tabindex="-1" class="selectability-offscreen">
+                  <option value="SRACE10_0">White</option>
+                  <option value="SRACE10_1">Black</option>
+                  <option value="SRACE10_2">Hispanic</option>
+                  <option value="SRACE10_3">Asian</option>
+                  <option value="SLUNCH3_0">Eligible for National School Lunch Program (NSLP)</option>
+                </select> 
+              </div> 
+            </div>
+          </div><!-- end selectors div -->
           <ul class="timeline-legend">
             <li class="type01">Commissions and Technical Panels</li>
             <li class="type02">Efforts to Evaluate Feasibility of Reporting Preparedness</li>
