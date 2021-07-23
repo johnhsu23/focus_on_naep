@@ -46,36 +46,26 @@
         <p>This timeline traces the steps leading to the development and implementation of the research agenda and reporting of findings regarding preparedness of 12th-graders for postsecondary education and job training from 2002 until 2020. Key dates and activities are listed with the opportunity to review key findings and additional information for each step in the process. In addition to viewing the efforts chronologically, readers may also choose to focus specifically on the following categories of work, as delineated with the following icons:</p>
         <div class="timeline-content">
           <p class="topic-hdr">Filter by</p>
-          <div class="selectors">
-            <div class="selector">
-              <label class="selector__label" for="student-group-selector">Select a Student Group</label> 
-              <div class="selector__select">
-                <div class="selectability" role="combobox application" tabindex="0" aria-expanded="true" aria-labelledby="" aria-disabled="false" aria-required="false">
-                  <div role="textbox" tabindex="-1" aria-readonly="true">White</div>
-                  <div role="listbox" tabindex="-1" aria-multiselectable="false">
-                    <div role="option" tabindex="-1" aria-disabled="false" aria-selected="true">White</div>
-                    <div role="option" tabindex="-1" aria-disabled="false" aria-selected="false">Black</div>
-                    <div role="option" tabindex="-1" aria-disabled="false" aria-selected="false">Hispanic</div>
-                    <div role="option" tabindex="-1" aria-disabled="false" aria-selected="false">Asian</div>
-                    <div role="option" tabindex="-1" aria-disabled="false" aria-selected="false">Eligible for National School Lunch Program (NSLP)</div>
-                  </div>
-                </div>
-                <select data-student-groups="" id="student-group-selector" tabindex="-1" class="selectability-offscreen">
-                  <option value="SRACE10_0">White</option>
-                  <option value="SRACE10_1">Black</option>
-                  <option value="SRACE10_2">Hispanic</option>
-                  <option value="SRACE10_3">Asian</option>
-                  <option value="SLUNCH3_0">Eligible for National School Lunch Program (NSLP)</option>
-                </select> 
-              </div> 
+          <div class="filters">
+            <div class="dropdown">
+              <button class="dropdown-toggle" type="button" aria-haspopup="true">Year</button>
+              <ul class="dropdown-menu" role="listbox" aria-expand="false">
+                <li class="menu-option" role="option" tabindex="0">2002</li>
+                <li class="menu-option" role="option" tabindex="0">2003</li>
+                <li class="menu-option" role="option" tabindex="0">2004</li>
+                <li class="menu-option" role="option" tabindex="0">2005</li>
+              </ul>
             </div>
-          </div><!-- end selectors div -->
-          <ul class="timeline-legend">
-            <li class="type01">Commissions and Technical Panels</li>
-            <li class="type02">Efforts to Evaluate Feasibility of Reporting Preparedness</li>
-            <li class="type03">Governing Board Actions and Decisions</li>
-            <li class="type04">Efforts to Produce Reference Points for Reporting Preparedness</li>
-          </ul>
+            <div class="divide">
+              <span>or</span>
+            </div>
+            <ul class="timeline-legend">
+              <li class="type01">Commissions and Technical Panels</li>
+              <li class="type02">Efforts to Evaluate Feasibility of Reporting Preparedness</li>
+              <li class="type03">Governing Board Actions and Decisions</li>
+              <li class="type04">Efforts to Produce Reference Points for Reporting Preparedness</li>
+            </ul>
+          </div>
           <ul class="timeline">
             <li class="event" data-date="November 2002">
               <h4 class="type01"><a href="#november2002">National Commission on NAEP 12th-Grade Assessment and Reporting established</a></h4>

@@ -56,4 +56,22 @@
       padding-bottom: 1em; 
       padding-left: 1em;
     }
+    .filters {
+      display: flex;
+      flex-direction: row;
+      // align-items: center;
+      @media only screen and (max-width: 900px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+    .divide {
+      padding: 0 1em;
+      span { 
+        color: $color-primary-1;
+        font-size: 1.2em;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+    }
   }
