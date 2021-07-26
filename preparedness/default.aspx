@@ -45,25 +45,20 @@
         <p>Between 1988 and 2002, participation in NAEP by schools and students remained relatively steady within each grade level. But in 2002, the participation rate for 12th-grade students dropped to 55 percent from its usual level of around 65 percent, prompting the Governing Board's executive director at the time, Roy Truby, to call for action. <em>The National Commission on NAEP 12th-Grade Assessment and Reporting</em> was appointed in response to this concern. The National Commission called for a "new vision for NAEP" and suggestions for achieving that included recommendations to increase interest in and the value of results for the 12th-grade NAEP assessments. This call ultimately led to an extensive and comprehensive research agenda aimed at reporting the preparedness of 12th-graders for postsecondary education and workplace training based on their NAEP performance.</p>
         <p>This timeline traces the steps leading to the development and implementation of the research agenda and reporting of findings regarding preparedness of 12th-graders for postsecondary education and job training from 2002 until 2020. Key dates and activities are listed with the opportunity to review key findings and additional information for each step in the process. In addition to viewing the efforts chronologically, readers may also choose to focus specifically on the following categories of work, as delineated with the following icons:</p>
         <div class="timeline-content">
-          <p class="topic-hdr">Filter by</p>
-          <div class="filters">
-            <div class="dropdown">
-              <button class="dropdown-toggle" type="button" aria-haspopup="true">Year</button>
-              <ul class="dropdown-menu" role="listbox" aria-expand="false">
-                <li class="menu-option" role="option" tabindex="0">2002</li>
-                <li class="menu-option" role="option" tabindex="0">2003</li>
-                <li class="menu-option" role="option" tabindex="0">2004</li>
-                <li class="menu-option" role="option" tabindex="0">2005</li>
-              </ul>
-            </div>
-            <div class="divide">
-              <span>or</span>
-            </div>
+          <div class="filter">
+            <p class="filter__header">Filter by Category:</p>
             <ul class="timeline-legend">
               <li class="type01">Commissions and Technical Panels</li>
               <li class="type02">Efforts to Evaluate Feasibility of Reporting Preparedness</li>
               <li class="type03">Governing Board Actions and Decisions</li>
               <li class="type04">Efforts to Produce Reference Points for Reporting Preparedness</li>
+            </ul>
+            <ul class="filter__year">
+              <li><span class="filter__header">OR Filter by Year:</span></li>
+              <li><a href="">2000-2006</a></li>
+              <li><a href="">2007-2010</a></li>
+              <li><a href="">2010-2014</a></li>
+              <li><a href="">2015-2020</a></li>
             </ul>
           </div>
           <ul class="timeline">

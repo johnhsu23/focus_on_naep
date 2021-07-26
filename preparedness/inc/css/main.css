@@ -164,19 +164,6 @@ main {
   content: "\2BC1";
 }
 
-.timeline-content .topic-hdr {
-  border-bottom: 3px solid #c69314;
-  color: #007367;
-  display: block;
-  font-size: 1.7rem;
-  font-weight: 700;
-  margin-bottom: 1em;
-  padding: 0;
-  text-align: left;
-  text-transform: uppercase;
-  width: 100%;
-}
-
 .timeline-content ul.timeline-legend {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -601,35 +588,39 @@ main {
   padding-left: 1em;
 }
 
-.start-main .filters {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.start-main .filter {
+  text-align: left;
 }
 
-@media only screen and (max-width: 900px) {
-  .start-main .filters {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-}
-
-.start-main .divide {
-  padding: 0 1em;
-}
-
-.start-main .divide span {
-  color: #001871;
-  font-size: 1.2em;
-  font-weight: 600;
+.start-main .filter__header {
+  color: #007367;
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  padding: 0;
+  text-align: left;
   text-transform: uppercase;
+  width: 100%;
+}
+
+.start-main .filter p {
+  padding: 0;
+}
+
+.start-main .filter__year {
+  border-top: 3px solid #c69314;
+  list-style-type: none;
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+.start-main .filter__year li {
+  font-size: 1.8rem;
+  display: inline-block;
+  padding-left: 1em;
+}
+
+.start-main .filter__year li:first-child {
+  padding-left: 0;
 }
