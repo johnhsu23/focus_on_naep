@@ -57,7 +57,12 @@
       padding-left: 1em;
     }  
     .filter {
+      background-color: $wht-color;
       text-align: left;
+      padding-bottom: 1em;
+      position: sticky;
+      top: 0;
+      z-index: 10;
       &__header {
         color: $color-primary-3;
         display: block;

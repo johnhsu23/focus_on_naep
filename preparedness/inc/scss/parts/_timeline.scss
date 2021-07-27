@@ -1,6 +1,8 @@
 .timeline-content {
     margin-top: 3.25rem;
     margin-bottom: 3em;
+    // height: 1000px;
+    position: relative;
     text-align: center; 
     [class^=type] {
       &::before { 
