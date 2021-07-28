@@ -55,7 +55,7 @@
             </ul>
             <ul class="filter__year">
               <li><span class="filter__header">OR Filter by Year:</span></li>
-              <li><a href="">2000-2006</a></li>
+              <li class="selected"><a href="">2000-2006</a></li>
               <li><a href="">2007-2010</a></li>
               <li><a href="">2010-2014</a></li>
               <li><a href="">2015-2020</a></li>

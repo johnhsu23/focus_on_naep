@@ -512,7 +512,6 @@ main {
   font-size: 1.6rem;
   margin: 0 auto;
   padding: 1em 0;
-  width: 1000px;
 }
 
 .start-intro h2 {
@@ -625,9 +624,19 @@ main {
 .start-main .filter__year li {
   font-size: 1.8rem;
   display: inline-block;
-  padding-left: 1em;
+  padding: 0 1em;
 }
 
 .start-main .filter__year li:first-child {
   padding-left: 0;
+}
+
+.start-main .filter__year li.selected {
+  background-color: #f2ede2;
+  border-radius: 5px;
+}
+
+.start-main .filter__year li.selected a {
+  font-weight: 700;
+  text-decoration: none;
 }
