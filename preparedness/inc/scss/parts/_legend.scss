@@ -1,0 +1,39 @@
+.timeline-legend {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    position: relative;
+    text-align: left;
+    li {
+      border-width: 1px 0 1px 1px;
+      border-style: solid;
+      border-color: $color-primary-2;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 0;
+      font-size: 0.8em;
+      padding: 0.2em 0.5em 0.5em 1.8em;
+      position: relative;
+      transition: all 0.3s ease 0s;
+      vertical-align: middle;
+      &:before {
+        padding-left: 0.5em;
+        top: 0.1em;
+      }
+      &:first-child {
+        border-radius: 0.175em 0 0 0.175em;
+      }
+      &:last-child {
+        border-right-width: 1px;
+        border-radius: 0 0.175em 0.175em 0;
+      }
+      &:hover {
+        background-color: rgba($color-primary-2, 0.5);
+        cursor: pointer;
+      }
+      &.active {
+        background-color: rgba($color-primary-2, 0.2);
+        font-weight: 600;
+      }
+    }
+  } 

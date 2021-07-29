@@ -131,6 +131,7 @@
             opacity: 0.8;
         }
         &:focus {
+            border: 1px dotted salmon;
             box-shadow: 0 0 3px rgba($blk-color, .75);
         }
     }
