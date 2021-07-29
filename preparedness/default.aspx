@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NAEP Preparedness Timeline</title>
-    <link href="inc/css/main.css" rel="stylesheet" />
+    <link href="inc/css/main.css?d=7-28-2021a" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <script src="inc/js/timeline.js"></script>
+    <script src="inc/js/timeline.js?d=7-28-2021d"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="/adminonly/themes/redesign_2015/header/header.css">
     <link href="/focus_on_naep/public/css/header-d85dccc6.css" rel="stylesheet">
@@ -46,19 +46,20 @@
         <p>This timeline traces the steps leading to the development and implementation of the research agenda and reporting of findings regarding preparedness of 12th-graders for postsecondary education and job training from 2002 until 2020. Key dates and activities are listed with the opportunity to review key findings and additional information for each step in the process. In addition to viewing the efforts chronologically, readers may also choose to focus specifically on the following categories of work, as delineated with the following icons:</p>
         <div class="timeline-content">
           <div class="filter">
-            <p class="filter__header">Filter by Category:</p>
+            <span class="filter__header">Filter by Category:</span>
             <ul class="timeline-legend">
-              <li class="type01">Commissions and Technical Panels</li>
-              <li class="type02">Efforts to Evaluate Feasibility of Reporting Preparedness</li>
-              <li class="type03">Governing Board Actions and Decisions</li>
-              <li class="type04">Efforts to Produce Reference Points for Reporting Preparedness</li>
+              <li tabindex="0" class="type01">Commissions and Technical Panels</li>
+              <li tabindex="0" class="type02">Efforts to Evaluate Feasibility of Reporting Preparedness</li>
+              <li tabindex="0" class="type03">Governing Board Actions and Decisions</li>
+              <li tabindex="0" class="type04">Efforts to Produce Reference Points for Reporting Preparedness</li>
             </ul>
             <ul class="filter__year">
-              <li><span class="filter__header">OR Filter by Year:</span></li>
-              <li class="selected"><a href="">2000-2006</a></li>
-              <li><a href="">2007-2010</a></li>
-              <li><a href="">2010-2014</a></li>
+              <li><span class="filter__header">OR Filter by Years:</span></li>
+              <li><a href="">2002-2006</a></li>
+              <li><a href="">2008-2010</a></li>
+              <li><a href="">2011-2014</a></li>
               <li><a href="">2015-2020</a></li>
+              <li class="selected"><a href="">All Years</a></li>
             </ul>
           </div>
           <ul class="timeline">
