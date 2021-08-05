@@ -72,7 +72,9 @@ $(function(){
 				if(anchors[i] == element1) {
 					index = i;
 					if(listItem.hasClass("selected")) {
-						listItem.removeClass("selected");
+						if(i != 4) {
+							listItem.removeClass("selected");
+						}
 						$("ul.timeline li").show();
 						return false;
 					}
@@ -80,16 +82,6 @@ $(function(){
 					listItem.addClass("selected");
 				}
 			}
-
-			// $("div.filter ul.filter__year li a").each(function(index, element2) {
-			// 	if(element1 == element2) {
-			// 		if($(element1).parent().hasClass("selected")) {
-			// 			$(element1).parent().removeClass("selected")
-			// 			// show all timeline elements
-			// 			return;
-			// 		}
-			// 	}
-			// });
 			var years = [];
 			if(index == 0) {
 				years = [2002, 2003, 2004, 2005, 2006];
@@ -99,6 +91,9 @@ $(function(){
 				years = [2011, 2012, 2013, 2014];
 			} else if (index == 3) {
 				years = [2015, 2016, 2017, 2018, 2019, 2020];
+			} else if (index == 4) {
+				$("ul.timeline li").show();
+				return false;
 			}
 			
 			$("ul.timeline li h4").parent().hide();
