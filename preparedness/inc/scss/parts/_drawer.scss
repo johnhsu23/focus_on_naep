@@ -1,11 +1,12 @@
 .drawer-panel {
     margin: 1em 0;
     .drawer {
-        background-color: $type-4a;
-        border: 1px solid $type-4;
+        // background-color: $type-4a;
+        // border: 1px solid $type-4;
+        border-bottom: 1px solid lightgray;
         position: relative;
         margin-bottom: 0.3em;
-        padding: 1em;
+        padding: 0;
         width: 100%;
         overflow: hidden;
         input {
@@ -14,23 +15,29 @@
             z-index: -1;
         }
         label.drawer-label {
+            background-color: $type-4a;
+            border: 1px solid $type-4;
             color: $type-2;
             cursor: pointer;
             display: flex;
+            font-weight: 600;
             justify-content: space-between;
-            padding: 0;
+            padding: 1em;
             position: relative;
             text-align: left; // for ie
             &:hover {
                 transition: opacity .25s ease-in-out;
             }
             &::before {
+                background-color: $wht-color;
                 color: $type-4;
-                position: absolute;
-                right: 0;
-                top: 0.1em;
                 display: block;
-                line-height: 0.5em;
+                font-family: FontAwesome;
+		  		font-size: 2em;//
+		  		line-height: 0.5em;
+                position: absolute;
+                right: 0.5em;
+                top: 0.65em;
                 transition: all 0.25s ease-in-out;
             }
         }
@@ -38,6 +45,7 @@
             max-height: 0;
             transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
             overflow: hidden;
+            h4, p { margin: 0 1em; }
         }
         /* :checked */
         input:checked ~ .drawer-content {
@@ -45,15 +53,30 @@
             max-height: 500em;
             transition: max-height 1s ease-in-out;
         }
-        input[type=checkbox] + label.drawer-label::before {
-            font-size: 2em;
-            font-weight: 800;
-            content: "\002B";
+        input[type=checkbox] + label.drawer-label {
+            // background: #007367;
+            // border: 1px solid #007367;
+            // color: #ffffff;
+            &::before {
+                // background-color: $wht-color;
+                font-size: 2em;
+                font-weight: 800;
+                // content: "\002B";
+                content: "\f055";
+            }
         }
-        input[type=checkbox]:checked + label.drawer-label::before {
-            content: "\2212";
-            color: $type-4;
-            transform: rotate(180deg);
+        input[type=checkbox]:checked + label.drawer-label {
+            background: #007367;
+            border: 1px solid #007367;
+            color: #ffffff;
+            &::before {
+                // content: "\2212";
+                background-color: transparent;
+                content: "\f056";
+                color: $wht-color;
+                // color: $type-2;
+                transform: rotate(180deg);
+            }
         }
         input + label.drawer-label {
             transition: all 0.3s ease-in-out;

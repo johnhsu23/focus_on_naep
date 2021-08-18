@@ -749,11 +749,10 @@ main {
 }
 
 .drawer-panel .drawer {
-  background-color: rgba(242, 237, 226, 0.3);
-  border: 1px solid #c69314;
+  border-bottom: 1px solid lightgray;
   position: relative;
   margin-bottom: 0.3em;
-  padding: 1em;
+  padding: 0;
   width: 100%;
   overflow: hidden;
   /* :checked */
@@ -766,15 +765,18 @@ main {
 }
 
 .drawer-panel .drawer label.drawer-label {
+  background-color: rgba(242, 237, 226, 0.3);
+  border: 1px solid #c69314;
   color: #007367;
   cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-weight: 600;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0;
+  padding: 1em;
   position: relative;
   text-align: left;
 }
@@ -785,12 +787,15 @@ main {
 }
 
 .drawer-panel .drawer label.drawer-label::before {
+  background-color: white;
   color: #c69314;
-  position: absolute;
-  right: 0;
-  top: 0.1em;
   display: block;
+  font-family: FontAwesome;
+  font-size: 2em;
   line-height: 0.5em;
+  position: absolute;
+  right: 0.5em;
+  top: 0.65em;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
@@ -800,6 +805,10 @@ main {
   -webkit-transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   overflow: hidden;
+}
+
+.drawer-panel .drawer .drawer-content h4, .drawer-panel .drawer .drawer-content p {
+  margin: 0 1em;
 }
 
 .drawer-panel .drawer input:checked ~ .drawer-content {
@@ -812,12 +821,19 @@ main {
 .drawer-panel .drawer input[type=checkbox] + label.drawer-label::before {
   font-size: 2em;
   font-weight: 800;
-  content: "\002B";
+  content: "\f055";
+}
+
+.drawer-panel .drawer input[type=checkbox]:checked + label.drawer-label {
+  background: #007367;
+  border: 1px solid #007367;
+  color: #ffffff;
 }
 
 .drawer-panel .drawer input[type=checkbox]:checked + label.drawer-label::before {
-  content: "\2212";
-  color: #c69314;
+  background-color: transparent;
+  content: "\f056";
+  color: white;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }

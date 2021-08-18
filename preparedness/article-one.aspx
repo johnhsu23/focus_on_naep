@@ -10,7 +10,10 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <!-- <script src="inc/js/timeline.js?d=7-28-2021d"></script> -->
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />	
     <link rel="stylesheet" href="/adminonly/themes/redesign_2015/header/header.css">
+    <link href="/focus_on_naep/public/css/header.css" rel="stylesheet" />
+    <link href="/focus_on_naep/public/css/footer.css?v=9789819b94065969d50a" rel="stylesheet" />
     <link href="/focus_on_naep/public/css/header-d85dccc6.css" rel="stylesheet">
     <link href="/focus_on_naep/public/css/footer-e0ef6a53.css" rel="stylesheet">
     <script>
@@ -31,7 +34,8 @@
     </script>
 </head>
 <body>
-  <!--#include file="../shared/header/header.inc"-->
+  <!--#include file="/adminonly/themes/redesign_2015/header/header.inc"-->
+  <!--#include file="/focus_on_naep/shared/header/header.inc"-->
   <main class="main-content">
     <header class="start-intro">
       <h2>Contextual Indicators of Academic Preparedness and Twelfth-Grade Reading Achievement</h2>
@@ -962,5 +966,6 @@
       </section>
     </article>
   </main> 
+  <!--#include file="/focus_on_naep/shared/footer/footer.inc"-->
 </body>
 </html>
