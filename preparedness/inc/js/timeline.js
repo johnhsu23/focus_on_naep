@@ -43,6 +43,7 @@ $(function(){
 		})
 
 		$("div.timeline-content ul.timeline-legend li").on("click", function(){
+			$("div.filter ul.filter__year li").removeClass("selected");
 			if(!$(this).hasClass("active")) var turnOn = true;
 			$("div.timeline-content ul.timeline-legend li").removeClass("active")
 			if(turnOn) {
@@ -59,6 +60,51 @@ $(function(){
 			} else {
 				$("ul.timeline li h4").parent().show();
 			}
+		})
+
+		$("div.filter ul.filter__year li a").on("click", function() {
+			$("div.timeline-content ul.timeline-legend li").removeClass("active")
+			var element1 = this;
+			var anchors = $("div.filter ul.filter__year li a");
+			var index = -1;
+			for(var i = 0; i < anchors.length; i++) {
+				var listItem = $(element1).parent();
+				if(anchors[i] == element1) {
+					index = i;
+					if(listItem.hasClass("selected")) {
+						if(i != 4) {
+							listItem.removeClass("selected");
+						}
+						$("ul.timeline li").show();
+						return false;
+					}
+					$("div.filter ul.filter__year li").removeClass("selected");
+					listItem.addClass("selected");
+				}
+			}
+			var years = [];
+			if(index == 0) {
+				years = [2002, 2003, 2004, 2005, 2006];
+			} else if (index == 1) {
+				years = [2008, 2009, 2010];
+			} else if (index == 2) {
+				years = [2011, 2012, 2013, 2014];
+			} else if (index == 3) {
+				years = [2015, 2016, 2017, 2018, 2019, 2020];
+			} else if (index == 4) {
+				$("ul.timeline li").show();
+				return false;
+			}
+			
+			$("ul.timeline li h4").parent().hide();
+			$("ul.timeline li").each(function(index, element3) {
+				for(var i = 0; i < years.length; i++) {
+					if($(element3).attr("data-date").indexOf(years[i]) >= 0) {
+						$(element3).show();
+					}
+				}
+			});
+			return false;
 		})
 	}
 

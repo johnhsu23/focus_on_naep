@@ -282,6 +282,7 @@
         </div><!-- end timeline-content -->
       </section>
     </article>
+    <!--#include file="/focus_on_naep/public/inc/footer.inc"-->
   </main>
   <div id="november2002" class="modal" role="dialog" aria-labelledby="NAEP Preparedness Timeline item details">
     <div class="modal__wrapper">
