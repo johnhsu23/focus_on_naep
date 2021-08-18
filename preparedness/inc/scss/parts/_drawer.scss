@@ -1,0 +1,62 @@
+.drawer-panel {
+    margin: 1em 0;
+    .drawer {
+        background-color: $type-4a;
+        border: 1px solid $type-4;
+        position: relative;
+        margin-bottom: 0.3em;
+        padding: 1em;
+        width: 100%;
+        overflow: hidden;
+        input {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+        }
+        label.drawer-label {
+            color: $type-2;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            padding: 0;
+            position: relative;
+            text-align: left; // for ie
+            &:hover {
+                transition: opacity .25s ease-in-out;
+            }
+            &::before {
+                color: $type-4;
+                position: absolute;
+                right: 0;
+                top: 0.1em;
+                display: block;
+                line-height: 0.5em;
+                transition: all 0.25s ease-in-out;
+            }
+        }
+        .drawer-content {
+            max-height: 0;
+            transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+            overflow: hidden;
+        }
+        /* :checked */
+        input:checked ~ .drawer-content {
+            margin-top: 1em;
+            max-height: 500em;
+            transition: max-height 1s ease-in-out;
+        }
+        input[type=checkbox] + label.drawer-label::before {
+            font-size: 2em;
+            font-weight: 800;
+            content: "\002B";
+        }
+        input[type=checkbox]:checked + label.drawer-label::before {
+            content: "\2212";
+            color: $type-4;
+            transform: rotate(180deg);
+        }
+        input + label.drawer-label {
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

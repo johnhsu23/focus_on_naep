@@ -112,6 +112,9 @@
     }
 
     &__close {
+        &:focus {
+            border: 1px dotted grey;
+        }
         &::before {
             background-color: $color-primary-2;
             content: "\2716 \00A0 CLOSE";
