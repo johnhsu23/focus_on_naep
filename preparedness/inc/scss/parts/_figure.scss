@@ -2,12 +2,26 @@ figure {
     margin: 1em 0;
     figcaption {
         font-weight: 500;
-        span { font-weight: 700; }
+        span {
+            border-right: 2px solid $blk-color;
+            display: inline-block;
+            font-weight: 700; 
+            padding-right: 0.4em;
+        }
     }
     img {
         display: block;
         margin: 0 auto;
-        padding: 2em 0
+        max-width: 100%;
+        padding: 2em 0;
+        @media screen and (max-width: 480px) {
+            margin: 0;
+            padding: 0;
+        }
+    }
+    /* accessibility descriptions */
+    .hide-it {
+        color: orangered;
     }
     &.figure03,
     &.figure05,
@@ -17,5 +31,10 @@ figure {
         margin-top: 0;
         margin-left: 2em;
         width: 50%;
+        @media screen and (max-width: 480px) {
+            float: none;
+            margin: 0;
+            width: 100%;
+        }
     }
 }

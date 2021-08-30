@@ -49,9 +49,109 @@ a:hover {
 
 main {
   margin: 0 auto;
-  /* this should be removed when moved to NCES website */
-  width: 1000px;
-  /* this should be removed when moved to NCES website */
+  padding: 1em 0;
+}
+
+@media screen and (min-width: 1024px) {
+  main {
+    max-width: 1024px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  main {
+    padding: 0 1em;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    margin: 0;
+    padding: 0 1em;
+    width: 100%;
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */
+  }
+  main table,
+  main thead,
+  main tbody,
+  main th,
+  main td,
+  main tr {
+    display: block;
+  }
+  main caption {
+    display: inline-block;
+  }
+  main thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  main tr {
+    border: 1px solid #ccc;
+  }
+  main th,
+  main td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  main th:before,
+  main td:before {
+    /* Now like a table header */
+    /* Top/left values mimic padding */
+    top: 6px;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  main table.table-01 th:nth-of-type(1):before {
+    content: "2019 achievement-level results:";
+  }
+  main table.table-01 td:nth-of-type(1):before {
+    content: "Definition\00b9:";
+  }
+  main table.table-01 td:nth-of-type(2):before {
+    content: "Detailed description:";
+  }
+  main table.table-02 th:nth-of-type(1):before {
+    content: "Survey question (NAEP ID):";
+  }
+  main table.table-02 td:nth-of-type(1):before {
+    content: "Type of contextual indicator:";
+  }
+  main table.table-03 th, main table.table-03 td, main table.table-04 th, main table.table-04 td, main table.table-05 th, main table.table-05 td, main table.table-06 th, main table.table-06 td {
+    text-align: left;
+  }
+  main table.table-03 th.subcat, main table.table-03 td.subcat, main table.table-04 th.subcat, main table.table-04 td.subcat, main table.table-05 th.subcat, main table.table-05 td.subcat, main table.table-06 th.subcat, main table.table-06 td.subcat {
+    padding-left: 1em;
+  }
+  main table.table-03 th:nth-of-type(1):before, main table.table-04 th:nth-of-type(1):before, main table.table-05 th:nth-of-type(1):before, main table.table-06 th:nth-of-type(1):before {
+    content: "Variable and description:";
+  }
+  main table.table-03 td:nth-of-type(1):before, main table.table-04 td:nth-of-type(1):before, main table.table-05 td:nth-of-type(1):before, main table.table-06 td:nth-of-type(1):before {
+    content: "Percentage:";
+  }
+  main table.table-03 td:nth-of-type(2):before, main table.table-04 td:nth-of-type(2):before, main table.table-05 td:nth-of-type(2):before, main table.table-06 td:nth-of-type(2):before {
+    content: "Average scale score:";
+  }
+  main table.table-03 td:nth-of-type(3):before, main table.table-04 td:nth-of-type(3):before, main table.table-05 td:nth-of-type(3):before, main table.table-06 td:nth-of-type(3):before {
+    content: "Percentage of students Below NAEP Basic:";
+  }
+  main table.table-03 td:nth-of-type(4):before, main table.table-04 td:nth-of-type(4):before, main table.table-05 td:nth-of-type(4):before, main table.table-06 td:nth-of-type(4):before {
+    content: "Percentage of students At NAEP Basic:";
+  }
+  main table.table-03 td:nth-of-type(5):before, main table.table-04 td:nth-of-type(5):before, main table.table-05 td:nth-of-type(5):before, main table.table-06 td:nth-of-type(5):before {
+    content: "Percentage of students At NAEP Proficient:";
+  }
+  main table.table-03 td:nth-of-type(6):before, main table.table-04 td:nth-of-type(6):before, main table.table-05 td:nth-of-type(6):before, main table.table-06 td:nth-of-type(6):before {
+    content: "Percentage of students At NAEP Advanced:";
+  }
 }
 
 .dropdown {
@@ -486,10 +586,6 @@ main {
   }
 }
 
-.modal__close:focus {
-  border: 1px dotted grey;
-}
-
 .modal__close::before {
   background-color: #c69314;
   content: "\2716 \00A0 CLOSE";
@@ -507,14 +603,12 @@ main {
   right: 0;
 }
 
-.modal__close:hover {
-  opacity: 0.8;
+.modal__close:focus {
+  outline: 1px solid red;
 }
 
-.modal__close:focus {
-  border: 1px dotted salmon;
-  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
-          box-shadow: 0 0 3px rgba(0, 0, 0, 0.75);
+.modal__close:hover {
+  opacity: 0.8;
 }
 
 .details {
@@ -568,8 +662,6 @@ main {
 
 .main-content {
   font-size: 1.6rem;
-  margin: 0 auto;
-  padding: 1em 0;
 }
 
 .start-intro h2 {
@@ -652,13 +744,14 @@ main {
 
 .start-main ul.article-points,
 .main-body ul.article-points {
-  margin: 1em;
+  margin: 0 1em;
   padding: 0 2em;
 }
 
 .start-main ul.article-points li,
 .main-body ul.article-points li {
-  padding: 1em 0;
+  line-height: 2;
+  padding: 0 0 1em 0;
 }
 
 .main-body p {
@@ -711,6 +804,14 @@ main {
   width: 40%;
 }
 
+@media screen and (max-width: 768px) {
+  .main-body aside {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
+}
+
 .main-body aside .aside__header {
   color: #007367;
   font-weight: 700;
@@ -749,7 +850,6 @@ main {
 }
 
 .drawer-panel .drawer {
-  border-bottom: 1px solid lightgray;
   position: relative;
   margin-bottom: 0.3em;
   padding: 0;
@@ -776,7 +876,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1em;
+  padding: 1em 3em 1em 1em;
   position: relative;
   text-align: left;
 }
@@ -787,7 +887,6 @@ main {
 }
 
 .drawer-panel .drawer label.drawer-label::before {
-  background-color: white;
   color: #c69314;
   display: block;
   font-family: FontAwesome;
@@ -801,27 +900,23 @@ main {
 }
 
 .drawer-panel .drawer .drawer-content {
+  margin-top: 1em;
   max-height: 0;
   -webkit-transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
   overflow: hidden;
+  padding: 0 1em;
 }
 
-.drawer-panel .drawer .drawer-content h4, .drawer-panel .drawer .drawer-content p {
-  margin: 0 1em;
+.drawer-panel .drawer .drawer-content hr {
+  border-top: 1px solid lightgray;
 }
 
 .drawer-panel .drawer input:checked ~ .drawer-content {
-  margin-top: 1em;
+  opacity: 1;
   max-height: 500em;
   -webkit-transition: max-height 1s ease-in-out;
   transition: max-height 1s ease-in-out;
-}
-
-.drawer-panel .drawer input[type=checkbox] + label.drawer-label::before {
-  font-size: 2em;
-  font-weight: 800;
-  content: "\f055";
 }
 
 .drawer-panel .drawer input[type=checkbox]:checked + label.drawer-label {
@@ -838,6 +933,12 @@ main {
           transform: rotate(180deg);
 }
 
+.drawer-panel .drawer input[type=checkbox] + label.drawer-label::before {
+  font-size: 2em;
+  font-weight: 800;
+  content: "\f055";
+}
+
 .drawer-panel .drawer input + label.drawer-label {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -845,6 +946,7 @@ main {
 
 figure {
   margin: 1em 0;
+  /* accessibility descriptions */
 }
 
 figure figcaption {
@@ -852,13 +954,28 @@ figure figcaption {
 }
 
 figure figcaption span {
+  border-right: 2px solid black;
+  display: inline-block;
   font-weight: 700;
+  padding-right: 0.4em;
 }
 
 figure img {
   display: block;
   margin: 0 auto;
+  max-width: 100%;
   padding: 2em 0;
+}
+
+@media screen and (max-width: 480px) {
+  figure img {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+figure .hide-it {
+  color: orangered;
 }
 
 figure.figure03, figure.figure05, figure.figure07, figure.figure08 {
@@ -866,6 +983,14 @@ figure.figure03, figure.figure05, figure.figure07, figure.figure08 {
   margin-top: 0;
   margin-left: 2em;
   width: 50%;
+}
+
+@media screen and (max-width: 480px) {
+  figure.figure03, figure.figure05, figure.figure07, figure.figure08 {
+    float: none;
+    margin: 0;
+    width: 100%;
+  }
 }
 
 table {
@@ -880,23 +1005,44 @@ table caption {
 }
 
 table caption span {
+  border-right: 2px solid black;
+  display: inline-block;
   font-weight: 700;
+  padding-right: 0.5em;
 }
 
 table th, table td {
   text-align: left;
   padding: 0.5em 1em;
-  vertical-align: top;
+  vertical-align: bottom;
+}
+
+table th.subcat, table td.subcat {
+  padding-left: 2em;
+}
+
+table th .sup1:before, table td .sup1:before {
+  content: "\00B9";
+}
+
+table th .sup2:before, table td .sup2:before {
+  content: "\00B2";
 }
 
 table thead th {
   background-color: #001871;
   border: 1px solid #001871;
+  border-right: 1px solid white;
   color: white;
   font-weight: 700;
 }
 
+table thead th:last-child {
+  border-right: 1px solid #001871;
+}
+
 table thead th[colspan="4"] {
+  border-bottom: 1px solid white;
   text-align: center;
 }
 
@@ -916,16 +1062,16 @@ table tbody tr:nth-child(odd) th, table tbody tr:nth-child(odd) td {
   background-color: #f1f1f1;
 }
 
-table tbody tr th, table tbody tr td {
-  border: 1px solid #d4d4d4;
-}
-
 table tbody tr th ul, table tbody tr td ul {
   margin: 0.5em 1em;
 }
 
 table tbody tr th ul li, table tbody tr td ul li {
   padding: 0;
+}
+
+table tbody tr th .pound:before, table tbody tr td .pound:before {
+  content: "#";
 }
 
 table tbody tr th .standard, table tbody tr td .standard {
@@ -938,7 +1084,7 @@ table tbody tr td {
   text-align: right;
 }
 
-table tfoot tr td p {
+table tfoot tr td {
   color: #767676;
   font-size: 1.2rem;
   line-height: 1.2 !important;
@@ -946,4 +1092,24 @@ table tfoot tr td p {
 
 table.table-01 tbody tr td, table.table-02 tbody tr td {
   text-align: left;
+}
+
+table.table-03 thead tr:first-child th:first-child, table.table-04 thead tr:first-child th:first-child, table.table-05 thead tr:first-child th:first-child, table.table-06 thead tr:first-child th:first-child {
+  width: 30%;
+}
+
+@media screen and (max-width: 800px) {
+  table.table-03 thead tr:first-child th:first-child, table.table-04 thead tr:first-child th:first-child, table.table-05 thead tr:first-child th:first-child, table.table-06 thead tr:first-child th:first-child {
+    width: auto;
+  }
+}
+
+table.table-03 thead tr:nth-child(2) th, table.table-04 thead tr:nth-child(2) th, table.table-05 thead tr:nth-child(2) th, table.table-06 thead tr:nth-child(2) th {
+  width: 10%;
+}
+
+@media screen and (max-width: 800px) {
+  table.table-03 thead tr:nth-child(2) th, table.table-04 thead tr:nth-child(2) th, table.table-05 thead tr:nth-child(2) th, table.table-06 thead tr:nth-child(2) th {
+    width: auto;
+  }
 }

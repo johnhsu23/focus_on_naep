@@ -112,9 +112,6 @@
     }
 
     &__close {
-        &:focus {
-            border: 1px dotted grey;
-        }
         &::before {
             background-color: $color-primary-2;
             content: "\2716 \00A0 CLOSE";
@@ -130,12 +127,11 @@
             top: 0;
             right: 0;
         }
+        &:focus {
+            outline: 1px solid red;
+        }
         &:hover {
             opacity: 0.8;
-        }
-        &:focus {
-            border: 1px dotted salmon;
-            box-shadow: 0 0 3px rgba($blk-color, .75);
         }
     }
 }

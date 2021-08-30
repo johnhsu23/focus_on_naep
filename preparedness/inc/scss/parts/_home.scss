@@ -1,8 +1,5 @@
 .main-content {
     font-size: 1.6rem;
-    margin: 0 auto;
-    padding: 1em 0;
-    // width: 1000px;
   }
   .start-intro {
     h2 {
@@ -59,10 +56,11 @@
       padding-left: 1em;
     }  
     ul.article-points {
-      margin: 1em;
+      margin: 0 1em;
       padding: 0 2em;
       li {
-        padding: 1em 0;
+        line-height: 2;
+        padding: 0 0 1em 0;
       }
     }
     
@@ -110,6 +108,11 @@
       margin: 0 0 0 2em;
       padding: 0.75em 0;
       width: 40%;
+      @media screen and (max-width: 768px) {
+        float: none;
+        margin: 0;
+        width: 100%;
+      }
       .aside__header {
         color:$type-2;
         font-weight: 700;

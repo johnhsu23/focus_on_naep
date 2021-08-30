@@ -6,20 +6,37 @@ table {
         font-weight: 600;
         text-align: left;
         margin: 1em 0;
-        span { font-weight: 700; }
+        span { 
+            border-right: 2px solid $blk-color;
+            display: inline-block;
+            font-weight: 700; 
+            padding-right: 0.5em;
+        }
     }
     th, td {
         text-align: left;
         padding: 0.5em 1em;
-        vertical-align: top;
+        vertical-align: bottom;
+        &.subcat { padding-left: 2em; }
+        .sup1:before {
+            content: "\00B9";
+        }
+        .sup2:before {
+            content: "\00B2";
+        }
     }
     thead {
         th {
             background-color: $color-primary-1;
             border: 1px solid $color-primary-1;
+            border-right: 1px solid $wht-color;
             color: $wht-color;
             font-weight: 700;
+            &:last-child {
+                border-right: 1px solid $color-primary-1;
+            }
             &[colspan="4"] {
+                border-bottom: 1px solid $wht-color;
                 text-align: center;
             }
         }
@@ -47,10 +64,13 @@ table {
                 }
             }
             th, td {
-                border: 1px solid $med-divide;
+                // border: 1px solid $med-divide;
                 ul {
                     margin: 0.5em 1em;
                     li { padding: 0; }
+                }
+                .pound:before {
+                    content: "#";
                 }
                 .standard {
                     color: $color-primary-3;
@@ -64,14 +84,29 @@ table {
         }
     }
     tfoot tr td {
-        p {
-            color: $gry-color;
-            font-size: 1.2rem;
-            line-height: 1.2 !important;
-        }
+        color: $gry-color;
+        font-size: 1.2rem;
+        line-height: 1.2 !important;
     }
     &.table-01,
     &.table-02 {
         tbody tr td { text-align: left; }
+    }
+    &.table-03,
+    &.table-04,
+    &.table-05,
+    &.table-06 { 
+        thead tr:first-child th:first-child {
+            width: 30%;
+            @media screen and (max-width: 800px) {
+                width: auto;
+            }
+        }
+        thead tr:nth-child(2) th {
+            width: 10%;
+            @media screen and (max-width: 800px) {
+                width: auto;
+            }
+        }
     }
 }

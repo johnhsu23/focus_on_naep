@@ -1,25 +1,104 @@
 html {
-    &.target {
-      padding-right: 1em;
-      overflow-y: hidden;
-      transition: all 0.5s ease-in;
+  &.target {
+    padding-right: 1em;
+    overflow-y: hidden;
+    transition: all 0.5s ease-in;
+  }
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+a { 
+  color: $color-primary-3;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+  &:hover {
+    text-decoration: none;
+    opacity: 0.8;
+  }
+}
+main {
+  margin: 0 auto;
+  padding: 1em 0;
+  // max-width: 1024px;
+  @media screen and (min-width: 1024px) {
+    max-width: 1024px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding: 0 1em;
+    width: 100%;
+  }
+  @media screen and (max-width: 767px) {
+    margin: 0;
+    padding: 0 1em;
+    width: 100%;
+    /* Force table to not be like tables anymore */
+    table, 
+    thead, 
+    tbody, 
+    th, 
+    td, 
+    tr {
+      display: block;
+    }
+    caption {
+      display: inline-block;
+    }
+      /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    tr { border: 1px solid #ccc; }
+    th,
+    td {
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%;
+    }
+    th:before,
+    td:before {
+      /* Now like a table header */
+      // position: absolute;
+      /* Top/left values mimic padding */top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+    }
+    table{
+      &.table-01 {
+        th:nth-of-type(1):before { content: "2019 achievement-level results:"; }
+        td:nth-of-type(1):before { content: "Definition\00b9:"; }
+        td:nth-of-type(2):before { content: "Detailed description:"; }
+      }
+      &.table-02 {
+        th:nth-of-type(1):before { content: "Survey question (NAEP ID):"; }
+        td:nth-of-type(1):before { content: "Type of contextual indicator:"; }
+      }
+      &.table-03,
+      &.table-04,
+      &.table-05,
+      &.table-06 {
+        th, td { 
+          text-align: left;
+          &.subcat {
+            padding-left: 1em;
+          } 
+        }
+        th:nth-of-type(1):before { content: "Variable and description:"; }
+        td:nth-of-type(1):before { content: "Percentage:"; }
+        td:nth-of-type(2):before { content: "Average scale score:"; }
+        td:nth-of-type(3):before { content: "Percentage of students Below NAEP Basic:"; }
+        td:nth-of-type(4):before { content: "Percentage of students At NAEP Basic:"; }
+        td:nth-of-type(5):before { content: "Percentage of students At NAEP Proficient:"; }
+        td:nth-of-type(6):before { content: "Percentage of students At NAEP Advanced:"; }
+      }
     }
   }
-  body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
-    line-height: 1.5;
-  }
-  a { 
-    color: $color-primary-3;
-    text-decoration: underline;
-    transition: all 0.2s ease;
-    &:hover {
-      text-decoration: none;
-      opacity: 0.8;
-    }
-  }
-  main {
-    margin: 0 auto;/* this should be removed when moved to NCES website */
-    width: 1000px;/* this should be removed when moved to NCES website */
-  }
+}
