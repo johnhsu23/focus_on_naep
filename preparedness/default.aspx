@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
     <title>NAEP Preparedness Timeline</title>
-    <link href="inc/css/main.css?d=7-28-2021a" rel="stylesheet" />
+    <link href="inc/css/main.css?d=10-07-2021a" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="inc/js/timeline.js?d=7-28-2021d"></script>
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="/adminonly/themes/redesign_2015/header/header.css">
-    <link href="/focus_on_naep/public/css/header.css" rel="stylesheet" />
-    <link href="/focus_on_naep/public/css/footer.css?v=9789819b94065969d50a" rel="stylesheet" />
-    <link href="/focus_on_naep/public/css/header-d85dccc6.css" rel="stylesheet">
-    <link href="/focus_on_naep/public/css/footer-e0ef6a53.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="/adminonly/themes/redesign_2015/header/header.css"> -->
+    <link href="../public/css/header.css?v=10082021" rel="stylesheet" />
+    <link href="../public/css/footer.css?v=9789819b94065969d50a" rel="stylesheet" />
+    <script src="../public/js/header.js"></script>
+    <!-- <link href="/focus_on_naep/public/css/header-d85dccc6.css" rel="stylesheet">
+    <link href="/focus_on_naep/public/css/footer-e0ef6a53.css" rel="stylesheet"> -->
     <script>
       function Dialog(dialogEl, overlayEl) {
         this.dialogEl = dialogEl;
@@ -24,8 +24,7 @@
     </script>
 </head>
 <body>
-  <!--#include file="/adminonly/themes/redesign_2015/header/header.inc"-->
-  <!--#include file="/focus_on_naep/shared/header/header.inc"-->
+  <!--#include file="/focus_on_naep/public/inc/header.inc"-->
   <main>
     <article class="main-content">
       <section class="start-intro">
@@ -287,14 +286,14 @@
         </div><!-- end timeline-content -->
       </section>
     </article>
-    <!--#include file="/focus_on_naep/public/inc/footer.inc"-->
   </main>
+  <!--#include file="/focus_on_naep/public/inc/footer.inc"-->
   <div id="november2002" class="modal" role="dialog" aria-labelledby="NAEP Preparedness Timeline item details">
     <div class="modal__wrapper">
       
       <div class="modal__content">
-        <!-- <a href="#" class="modal__close" tabindex="0" aria-label="Close dialog" title="Close Dialog"></a> -->
-        <a href="#"><button class="modal__close" tabindex="0" aria-label="Close dialog" title="Close Dialog"></button></a>
+        <a href="#" class="modal__close" tabindex="0" aria-label="Close dialog" title="Close Dialog"></a>
+        <!-- <a href="#"><button class="modal__close" tabindex="0" aria-label="Close dialog" title="Close Dialog"></button></a> -->
         <div class="modal__details">
           <!-- <a href="#" class="modal__close" tabindex="1" aria-label="Close dialog" title="Close Dialog"></a> -->
           <div class="modal__text">
@@ -325,6 +324,5 @@
       </div><!-- end modal content div -->
     </div><!-- end modal wrapper div -->
   </div><!-- end modal div -->
-   <!--#include file="/focus_on_naep/shared/footer/footer.inc"-->
 </body>
 </html>

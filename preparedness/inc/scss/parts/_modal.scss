@@ -127,8 +127,8 @@
             top: 0;
             right: 0;
         }
-        &:focus {
-            outline: 1px solid red;
+        &:focus::before {
+            border: 1px dotted $color-primary-3;
         }
         &:hover {
             opacity: 0.8;

@@ -361,7 +361,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID B035701. Taken the SAT or the ACT College Entrance Exam">B035701: Taken the SAT or the ACT College Entrance Exam</th>
+                    <th colspan="7" scope="row" tabindex="-1">B035701: Taken the SAT or the ACT College Entrance Exam</th>
                   </tr>
                   <tr>
                     <th class="subcat" scope="row" tabindex="-1">Yes</th>
@@ -382,7 +382,7 @@
                     <td tabindex="-1">6</td>
                   </tr>
                   <tr>
-                    <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID B035702. Submitted the Free Application for Federal Student Aid (FAFSA)">B035702: Submitted the Free Application for Federal Student Aid (FAFSA)</th>
+                    <th colspan="7" scope="row" tabindex="-1">B035702: Submitted the Free Application for Federal Student Aid (FAFSA)</th>
                   </tr>
                   <tr>
                     <th class="subcat" scope="row" tabindex="-1">Yes</th>
@@ -403,7 +403,7 @@
                     <td tabindex="-1">3</td>
                   </tr>
                   <tr>
-                    <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID B035703. Applied to a two-year college">B035703: Applied to a two-year college</th>
+                    <th colspan="7" scope="row" tabindex="-1">B035703: Applied to a two-year college</th>
                   </tr>
                   <tr>
                     <th class="subcat" scope="row" tabindex="-1">Yes</th>
@@ -424,7 +424,7 @@
                     <td tabindex="-1">9</td>
                   </tr>
                   <tr>
-                    <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID B035705. Applied to a four-year college">B035705: Applied to a four-year college</th>
+                    <th colspan="7" scope="row" tabindex="-1">B035705: Applied to a four-year college</th>
                   </tr>
                   <tr>
                     <th class="subcat" scope="row" tabindex="-1">Yes</th>
@@ -445,7 +445,7 @@
                     <td tabindex="-1">2</td>
                   </tr>
                   <tr>
-                    <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID B035707. Applied to a certificate or diploma program at a school that provides occupational training">B035707: Applied to a certificate or diploma program at a school that provides occupational training</th>
+                    <th colspan="7" scope="row" tabindex="-1">B035707: Applied to a certificate or diploma program at a school that provides occupational training</th>
                   </tr>
                   <tr>
                     <th class="subcat" scope="row" tabindex="-1">Yes</th>
@@ -546,7 +546,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID B035709. Talked with a military recruiter">B035709: Talked with a military recruiter</th>
+                    <th colspan="7" scope="row" tabindex="-1">B035709: Talked with a military recruiter</th>
                   </tr>
                   <tr>
                     <th class="subcat" scope="row" tabindex="-1">Yes</th>
@@ -567,7 +567,7 @@
                     <td tabindex="-1">8</td>
                   </tr>
                   <tr>
-                    <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID B035711. Applied for a full-time job">B035711: Applied for a full-time job</th>
+                    <th colspan="7" scope="row" tabindex="-1">B035711: Applied for a full-time job</th>
                   </tr>
                   <tr>
                     <th class="subcat" scope="row" tabindex="-1">Yes</th>
@@ -672,7 +672,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID B018101. Days absent from school in the last month">B018101: Days absent from school in the last month</th>
+                    <th colspan="7" scope="row" tabindex="-1">B018101: Days absent from school in the last month</th>
                   </tr>
                   <tr>
                     <th class="subcat" scope="row" tabindex="-1">None</th>
@@ -720,7 +720,7 @@
                     <td tabindex="-1">1</td>
                   </tr>
                   <tr>
-                    <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID APIBELA. Taking or took Advanced Placement English or language arts course and/or International Baccalaureate Language A1">APIBELA: Taking or took Advanced Placement English/language arts course and/or International Baccalaureate Language A1</th>
+                    <th colspan="7" scope="row" tabindex="-1">APIBELA: Taking or took Advanced Placement English/language arts course and/or International Baccalaureate Language A1</th>
                   </tr>
                   <tr>
                     <th class="subcat" scope="row" tabindex="-1">Taking or took Advanced Placement English/language arts course</th>
@@ -798,7 +798,7 @@
               </tfoot>
               <tbody>
                 <tr>
-                  <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID SQCATR4. Persistence in learning">SQCATR4: Persistence in learning</th>
+                  <th colspan="7" scope="row" tabindex="-1">SQCATR4: Persistence in learning</th>
                 </tr>
                 <tr>
                   <th class="subcat" scope="row" tabindex="-1">Low</th>
@@ -828,7 +828,7 @@
                   <td tabindex="-1">7</td>
                 </tr>
                 <tr>
-                  <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID SQCATR5. Academic self-discipline">SQCATR5: Academic self-discipline</th>
+                  <th colspan="7" scope="row" tabindex="-1">SQCATR5: Academic self-discipline</th>
                 </tr>
                 <tr>
                   <th class="subcat" scope="row" tabindex="-1">Low</th>
@@ -858,7 +858,7 @@
                   <td tabindex="-1">8</td>
                 </tr>
                 <tr>
-                  <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID SQCATR7. Confidence in reading knowledge and skills">SQCATR7: Confidence in reading knowledge and skills</th>
+                  <th colspan="7" scope="row" tabindex="-1">SQCATR7: Confidence in reading knowledge and skills</th>
                 </tr>
                 <tr>
                   <th class="subcat" scope="row" tabindex="-1">Low</th>
@@ -888,7 +888,7 @@
                   <td tabindex="-1">9</td>
                 </tr>
                 <tr>
-                  <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID SQCATR9. Performance goals in reading">SQCATR9: Performance goals in reading</th>
+                  <th colspan="7" scope="row" tabindex="-1">SQCATR9: Performance goals in reading</th>
                 </tr>
                 <tr>
                   <th class="subcat" scope="row" tabindex="-1">Low</th>
@@ -918,7 +918,7 @@
                   <td tabindex="-1">8</td>
                 </tr>
                 <tr>
-                  <th colspan="7" scope="row" tabindex="-1" aria-label="NAEP ID SQCTR10. Mastery goals in reading">SQCTR10: Mastery goals in reading</th>
+                  <th colspan="7" scope="row" tabindex="-1">SQCTR10: Mastery goals in reading</th>
                 </tr>
                 <tr>
                   <th class="subcat" scope="row" tabindex="-1">Low</th>

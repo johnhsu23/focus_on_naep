@@ -18,6 +18,9 @@ a {
     text-decoration: none;
     opacity: 0.8;
   }
+  &:focus {
+    border: 1px dotted $color-primary-3;
+  }
 }
 main {
   margin: 0 auto;
