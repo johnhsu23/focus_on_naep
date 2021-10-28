@@ -664,45 +664,103 @@ main {
   font-size: 1.6rem;
 }
 
-.start-intro h2 {
+.start-intro {
+  padding-left: 1em;
+}
+
+.start-intro h2, .start-intro h3 {
   color: #001871;
+  font-weight: 400;
   padding-bottom: 1em;
 }
 
-.start-intro .flex-body {
+.start-intro .article-banner {
+  background-size: 0;
+  background-repeat: no-repeat;
+  min-height: 135px;
+  margin: 0 0 25px;
+}
+
+.start-intro .article-banner p {
+  line-height: 1.5;
+}
+
+.start-intro .article-banner__title {
+  padding-bottom: 0;
+  padding-top: 1em;
+}
+
+.start-intro .article-banner--preparedness {
+  background-image: url("images/preparedness-cap-icon.png");
+  background-position: -5px -5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .start-intro .article-banner {
+    background-size: 289px 133px;
+    padding-left: 295px;
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .start-intro .article-banner__title {
+    font-size: 26px;
+  }
+}
+
+.start-intro .flexi {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-.start-intro .flex-row {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-left: 1em;
-  width: 60%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1em;
+  width: 100%;
 }
 
-.start-intro .flex-column {
+.start-intro .flexi__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 1em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 40%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
 }
 
-.start-intro .flex-column img {
+@media screen and (min-width: 800px) {
+  .start-intro .flexi__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+}
+
+.start-intro .flexi__item:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+  margin-right: 1em;
+}
+
+@media screen and (max-width: 800px) {
+  .start-intro .flexi__item:first-child {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    padding-bottom: 1em;
+  }
+}
+
+.start-intro .flexi__img {
   max-width: 100%;
   height: auto;
 }

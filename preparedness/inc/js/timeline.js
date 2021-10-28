@@ -22,11 +22,50 @@ $(function(){
 			// $(".modal-content").css("top", 500)
 		})
 		$("div.timeline-content .event a").on("click", function(){
+			$(".modal").removeClass(".modal-active");
+			var id = $(this).attr("href");
+			$(id + " .modal__close").focus();
+			var $focused = $(':focus');
 			// var id = $(this).attr("id")
 			// $("#pull-up-modal p.like-h4 span:nth-of-type(1)").html(_timelineContents[id].date);
 			// $("#pull-up-modal p.like-h4 span:nth-of-type(2)").html(_timelineContents[id].title);
 			// $("#pull-up-modal p:nth-of-type(2)").html(_timelineContents[id].body);
 			_top = $(document).scrollTop();
+
+			// add all the elements inside modal which you want to make focusable
+			const  focusableElements =
+			    'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"]), a';
+			const modal = document.querySelector($(this).attr("href")); // select the modal by it's id
+
+			const firstFocusableElement = modal.querySelectorAll(focusableElements)[0]; // get first element to be focused inside modal
+			const focusableContent = modal.querySelectorAll(focusableElements);
+			const lastFocusableElement = focusableContent[focusableContent.length - 1]; // get last element to be focused inside modal
+			// alert(focusableContent.length)
+			// for(var i = 0; i < focusableContent.length; i++) {
+			// 	alert(focusableContent[i].nodeName)
+			// }
+			document.addEventListener('keydown', function(e) {
+			  let isTabPressed = e.key === 'Tab' || e.keyCode === 9;
+
+			  if (!isTabPressed) {
+			    return;
+			  }
+
+			  if (e.shiftKey) { // if shift key pressed for shift + tab combination
+			    if (document.activeElement === firstFocusableElement) {
+			      lastFocusableElement.focus(); // add focus for the last focusable element
+			      e.preventDefault();
+			    }
+			  } else { // if tab key is pressed
+			    if (document.activeElement === lastFocusableElement) { // if focused has reached to last focusable element then focus first focusable element after pressing tab
+			      firstFocusableElement.focus(); // add focus for the first focusable element
+			      e.preventDefault();
+			    }
+			  }
+			});
+
+			firstFocusableElement.focus();
+
 			// $(".modal-content").css("top", $(document).scrollTop())
 			// setTimeout(function() {
 			// 	window.scrollTo(0, _top)	
@@ -34,13 +73,29 @@ $(function(){
 			// $("article.expanded-view").hide("slide", {direction: "down"}, 2000);
 		})
 
+		$("div.details details__trigger").on("click", function() {
+			alert("click")
+		})
+
 		$("div.modal .modal__close").on("click", function() {
+			afterCloseModal()
+			var id = $(this).closest(".modal").attr("id");
+			$("ul.timeline " + "a[href='#" + id + "'").focus();
+		})
+
+		$("div.modal .modal__close").on("keydown", function() {
+			afterCloseModal()			
+		})
+
+		function afterCloseModal() {
 			$('html').removeClass('target');
 			$(this).parent().find(".details__state").prop("checked", false);
 			var timeout = setTimeout(function() {
 				window.scrollTo(0, _top);
 			}, 100)
-		})
+
+
+		}
 
 		$("div.timeline-content ul.timeline-legend li").on("click", function(){
 			$("div.filter ul.filter__year li").removeClass("selected");
@@ -159,6 +214,7 @@ $(function(){
 			clone.find(".modal__text .details__contents").append(_timelineContents[i].tier2);
 			if(!_timelineContents[i].tier2) {
 				clone.find(".modal__text .details__trigger").remove();
+				clone.find(".modal__text .details__state").remove();
 			}
 			var footnoteIndexes = _timelineContents[i].footnoteIndexes;
 			// var footnotes = _timelineContents[i].
@@ -177,6 +233,11 @@ $(function(){
 			$("body").append(clone);
 			// }
 		}
+		$(".modal__text .details label").on("keypress", function(evt) {
+			if(evt.which == 13) {
+				$(this).parent().children("input").trigger('click');
+			}
+		})
 		$(".modal:first").remove();
 		// var overlay = $(".modal-overlay")
 		// $("body").append(overlay);

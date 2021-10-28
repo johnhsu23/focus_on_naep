@@ -1,5 +1,27 @@
 .details {
     padding-bottom: 1em;
+    position: relative;
+    &__trigger {
+        background-color: #ffffff;
+        border: none;
+        cursor: pointer;
+        display: inline-block;
+        // padding: 0.5em 0;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        transition: all 0.2s ease;
+        &:hover {
+            opacity: 0.8;
+        }
+        &:focus {
+            border: 1px dotted $type-2;
+        }
+        &:active {
+            padding: 0;
+        }
+    }
     &__state { display: none; }
     &__state ~ &__trigger::before {
         color: $color-primary-3;
@@ -7,22 +29,14 @@
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 0.1em;
-        position: absolute;
+        // position: absolute;
         text-transform: uppercase;
-        right: 0;
+        // right: 0;
     }
     &__state:checked ~ &__trigger::before {
         content: "\2212 \00A0 Hide Details";
     }
-    &__trigger {
-        cursor: pointer;
-        display: inline-block;
-        padding: 0.5em 0;
-        transition: all 0.2s ease;
-        &:hover {
-            opacity: 0.8;
-        }
-    }
+    
     &__contents {
         display: none;
         opacity: 0;

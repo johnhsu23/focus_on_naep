@@ -112,23 +112,39 @@
     }
 
     &__close {
+        background-color: $color-primary-2;
+        border: none;
+        padding: 1em;
+        position: absolute;
+        transition: all 0.2s ease;
+        vertical-align: middle;
+        z-index: 1000;
+        top: 0;
+        right: 0;
         &::before {
-            background-color: $color-primary-2;
             content: "\2716 \00A0 CLOSE";
             color: $wht-color;
             font-size: 1.8rem;
             font-weight: 700;
             letter-spacing: 0.1em;
-            padding: 0.5em 1em;
-            position: absolute;
-            transition: all 0.2s ease;
-            vertical-align: middle;
-            z-index: 1000;
-            top: 0;
-            right: 0;
         }
+        // &::before {
+        //     background-color: $color-primary-2;
+        //     content: "\2716 \00A0 CLOSE";
+        //     color: $wht-color;
+        //     font-size: 1.8rem;
+        //     font-weight: 700;
+        //     letter-spacing: 0.1em;
+        //     padding: 0.5em 1em;
+        //     position: absolute;
+        //     transition: all 0.2s ease;
+        //     vertical-align: middle;
+        //     z-index: 1000;
+        //     top: 0;
+        //     right: 0;
+        // }
         &:focus {
-            outline: 1px solid red;
+            border: 1px dotted $type-2;
         }
         &:hover {
             opacity: 0.8;
